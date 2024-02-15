@@ -1,0 +1,492 @@
+/*----------------------------------Perfil do Cliente----------------------------------*/
+
+.escondido{
+    display:none;
+}
+.perfilCliente{
+    width: 100%;
+    max-height: 110px;
+    border-radius: 20px;
+    padding-bottom: 70px;
+
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(196,196,196,1);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(196,196,196,1);
+    box-shadow: -7px 1px 18px 0px rgb(0 0 0 / 24%);
+}
+
+.bgPerfil{
+    width: 100%;
+    max-height: 110px;
+    background: linear-gradient(180deg, rgb(255 255 255) 0%, rgb(243 243 243 / 80%) 100%);
+
+    display: flex;
+    border-radius: 20px;
+    padding-bottom: 70px;
+}
+
+.informacoes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.informacoes #imgCliente{
+    object-fit: cover;
+    height: 130px;
+    width: 130px;
+    border-radius: 50% 50% 8px;
+}
+
+#btnSelecionarImagemPerfil, #btnSalvarFotoPerfil {
+    width: 130px;
+    border-radius: 50% 50% 8px;
+    background-color: #1d1d5d7d;
+    position: absolute;
+    height: 130px;
+    display: flex;
+    top: -55px;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--Medium);
+    color: var(--Branco);
+    cursor:pointer;
+}
+
+
+.info{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info h2{
+    color: var(--Azul-Escuro);
+    font-family: var(--Bold);
+    margin: 5px 0;
+}
+
+.info .profissao{
+    background-color: var(--Azul-Oscuro);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin: 7px 0;
+
+    display: flex;
+    align-items: center;
+
+}
+
+.info .profissao img{
+    width: 15px;
+    padding-left: 10px;
+}
+
+.info .profissao p{
+    font-family: var(--Regular);
+}
+
+.cidade{
+    display: flex;
+    align-items: center;
+    margin: 5px 0 15px;
+}
+
+.cidade img{
+    width: 15px;
+    margin: 0 10px;
+}
+
+/*----------------------------------BACKGROUND FUNDO----------------------------------*/
+
+.sessaoBg{
+    padding-bottom: 50px;
+    padding-top: 180px;
+}
+
+.sessaoBg main{
+    width: 80%;
+    margin:auto;
+    
+}
+
+.atualizarDados{
+    width:100%;
+    margin-bottom: 75px;
+    display:flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: var(--Bold);
+    color: var(--Magenta);
+}
+
+.atualizarDados figure{
+    width:18px;
+}
+
+.atualizarDados figure img{
+    width:100%;
+}
+
+.dadosClientes{
+    display:flex;
+
+    position:relative;
+    background-color: var(--Branco);
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding:40px;
+    margin-top: 50px;
+
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(196,196,196,1);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(196,196,196,1);
+    box-shadow: -7px 1px 18px 0px rgb(0 0 0 / 24%);
+}
+
+.dadosForm1{
+    width:100%;
+
+    display:flex;
+    gap:70px;
+}
+
+.dadosForm1 label{
+    width:100%;
+    margin-bottom: 20px;
+
+    font-size:18px;
+    font-family: var(--Bold);
+    color: var(--Roxo);
+
+    transition:all 300ms;
+}
+
+.coluna1, .coluna2{
+    width:50%;
+    gap:20px;
+    display:flex;
+    flex-direction: column;
+}
+
+.divInput figure{
+    height:50%;
+    margin-left:5px;
+}
+
+.divInput figure img{
+    height:100%;
+}
+
+.divInput .inputs::placeholder{
+    color:#A0A0A0;
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+.divInput .inputs:focus{
+    outline: none;
+}
+
+.senha{
+    display:flex;
+    flex-direction: column;
+}
+
+.avisoInput {
+    position: relative;
+}
+  
+#aviso-icon {
+    cursor: pointer;
+    height: 19.22px;
+    margin-left: 5px;
+}
+
+.popupAviso {
+    background-color: #f9f9f9;
+    width: 170px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    top: 80%;
+    left: 50%;
+
+    border: 1px solid #ccc;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.3s, bottom 0.3s;
+    z-index: 1;
+}
+  
+.avisoInput:hover .popupAviso {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+
+}
+
+/*----------------------------SOMENTE SOBRE A COLUNA 1------------------------*/
+
+.coluna1 .divInput{
+    height:40px;
+    max-width:100%;
+
+    margin-top:3px;
+    display:flex;
+    align-items: center;
+
+    color: #0B0B22;
+}
+
+.coluna1 .divInput .inputs{
+    height:100%;
+    width:100%;
+    padding-left:10px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border:none;
+
+    background-color: #F2F2FC;
+
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+/*----------------------------SOMENTE SOBRE A COLUNA 2------------------------*/
+
+.coluna2 .divInput{
+    height:40px;
+    max-width:100%;
+
+    margin-top:3px;
+    display:flex;
+    align-items: center;
+
+    color: #0B0B22;
+}
+
+.coluna2 .divInput .inputs{
+    height:100%;
+    width:100%;
+    padding-left:10px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border:none;
+
+    background-color: #F2F2FC;
+
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+.coluna2 p {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: #7C7C7C;
+    font-family: var(--Regular);
+    font-size: 12px;
+}
+
+.coluna2 #btnSalvarAlteracoes{
+    
+    max-width: 150px;
+    margin-top:80px;
+
+    background-color: var(--Magenta);
+
+    border:none;
+    border-top-right-radius: 10px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:3px;
+
+    font-family: var(--Semi-bold);
+    font-size: var(--Regular);
+    color: var(--Branco);
+
+    padding: 10px;
+    box-sizing: border-box;
+    cursor:pointer;
+}
+
+.estado{
+    margin-right: 50px;
+}
+
+/*------------------------------------- ÁREA SALVAR -------------------------------------*/
+
+.pnlSalvar{
+    width: 40vh;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+    z-index: 12;
+
+    background-color: white;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+
+    border-radius: 20px;
+    padding:30px;
+
+    box-shadow: 1px 3px 13px 1px #0000002e;
+}
+
+.pnlSalvar div{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px
+}
+
+#btnVoltar, #btnSalvar{
+    border-radius: 10px 2px 10px 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.btnSalvar {
+    bottom: 40px;
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 10px 2px 10px 2px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--Roxo);
+    color: white;
+}
+
+#btnVoltar {
+    background-color: var(--Magenta);
+    color: white;
+    padding: 10px;
+}
+
+#btnSalvar{
+    background-color: var(--Roxo);
+    color: white;
+    width: fit-content;
+}
+
+.blur{
+    width: 103%;
+    height: 104%;
+    position: absolute;
+    top: -5px;
+    right: -18px;
+    z-index: 11;
+    background-color: var(--Roxo);
+    opacity: 0.28;
+    filter: blur(9px);
+}
+
+
+.dadosEdicao {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+
+.dados {
+display: flex;
+width: 100%;
+gap: 80px;
+padding: 0 30px 0px 30px;
+}
+
+@media screen and (max-width: 600px) {
+    /*----------------------------------BACKGROUND FUNDO----------------------------------*/
+
+    .sessaoBg {
+        padding: 120px 0;
+        margin: auto;
+        width: 85%;
+        padding: 114px 0;
+    }
+
+        .sessaoBg main {
+            width: 100%;
+        }
+
+
+    /*--------------------------------AJUSTES GERAIS----------------------------------*/
+
+    .informacoes #imgCliente {
+        width: 100px;
+    }
+
+    .info h2 {
+        text-align: center;
+    }
+
+    .sessaoBg main .section_geral {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .dadosForm1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+        .dadosForm1 label {
+            margin-bottom: 18px;
+        }
+
+    .coluna1, .coluna2 {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+        .coluna2 #btnCriarPerfil {
+            min-width: 40%;
+        }
+
+    .popupAviso {
+        width: 65px;
+        left: -53%;
+    }
+
+    .coluna2 #btnSalvarAlteracoes {
+        width: 100px;
+    }
+
+    .dados{
+        display: block !important;
+        padding: 0;
+    }
+
+    #btnSelecionarImagemPerfil, #btnSalvarFotoPerfil {
+        width: 100px;
+        height: 100px;
+        top: -40px;
+    }
+
+    .perfilCliente {
+        margin-top: 60px;
+    }
+}
+

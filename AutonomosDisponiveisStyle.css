@@ -1,0 +1,317 @@
+/*----------------------------------BACKGROUND FUNDO----------------------------------*/
+
+.sessaoBg main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+.atualizarDados{
+    width:100%;
+    margin-bottom: 30px;
+    display:flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: var(--Bold);
+    color: var(--Magenta);
+}
+
+.atualizarDados figure{
+    width:18px;
+    cursor:pointer;
+}
+
+.atualizarDados figure img{
+    width:100%;
+}
+
+.sessaoBg main .geral{
+    width:90%;
+
+    padding:40px;
+    box-sizing: border-box;
+    margin: 150px auto 50px auto;
+
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    background-color: var(--Branco);
+}
+
+
+/*----------------------------------Resultados da busca----------------------------------*/
+.SemAutonomos{
+    margin-top: 30px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.SemAutonomos figure{
+    width:20%
+}
+.SemAutonomos figure img{
+    width:100%;
+}
+.SemAutonomos h2{
+    margin-top: 15px;
+    font-family: var(--Bold);
+    font-size: 20px;
+    color:var(--Roxo);
+    text-align: center;
+    max-width:318px;
+}
+.SemAutonomos p{
+    font-family: var(--Regular);
+    font-size: 14px;
+    margin-top: 15px;
+    max-width:318px;
+    text-align: center;
+}
+
+.dadosForm2{
+    width:100%;
+    display:flex;
+    gap:70px;
+}
+
+.autonomosDisponiveis{
+    width: 75%;
+}
+
+.autonomosDisponiveis .divInput{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-bottom: 10px;
+}
+
+.autonomosDisponiveis .divInput input{
+    width: 100%;
+    height: 40px;
+    background-color: #D0D0E8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    border-top-right-radius: 20px;
+    padding: 0 10px;
+}
+
+.autonomosDisponiveis input:focus{
+    outline: none;
+    color:rgb(26, 26, 26);
+}
+
+.autonomosDisponiveis input::placeholder{
+    color:var(--Branco);
+    font-size: 16px;
+    font-family: var(--Regular);
+}
+
+.autonomosDisponiveis .divInput #btnBuscaAutonomos {
+    width: 20px;
+    height:20px;
+    background-color: white;
+    border: none;
+    border-radius: 15px 15px 1px;
+    padding: 10px 19px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#btnBuscaAutonomos img{
+    width:10px;
+}
+
+.autonomosDisponiveis img{
+    width: 20px;
+}
+
+.resultados{
+    height: 500px;
+    overflow-y: scroll;
+    scroll-padding-top: 18px;
+    text-align: left;
+}
+
+.resultados::-webkit-scrollbar {
+    width: 5px;  
+}
+  
+.resultados::-webkit-scrollbar-thumb {
+    background-color: rgb(173, 173, 173);
+    border-radius: 20px; 
+}
+
+.autonomosResultado{
+    color: #0B0B22;
+    display: flex;
+    margin: 18px 10px 18px 0;
+}
+
+.autonomosResultado img{
+    width: 110px;
+    border-radius: 20px 0 0 20px;
+}
+
+.autonomo{
+    width: 90%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0 20px 20px 0;
+}
+
+.imgAutonomo{
+    width: 110px;
+    height: 115px;
+    border-radius: 20px 0 0 20px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.autonomo input[type="checkbox"] {
+    width: 15px;
+    height: 20px;
+    margin: 10px;
+}
+
+.infoAutonomo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.infoAutonomo img{
+    width: 100px;
+    height: 16px;
+    margin: 2.5px 0;
+}
+
+.infoAutonomo h3{
+    margin: 2.5px 0;
+}
+
+.infoAutonomo .descricao{
+    color: #A0A0A0;
+    font-family: var(--Regular);
+    margin: 2.5px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.coracoesEButton{
+    display:flex;
+    align-items: center;
+    height:60px;
+    position:relative;
+}
+
+.autonomo .coracoesVazados{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+
+.autonomo .coracoesPreenchidos{
+    /*position:absolute;
+    right:0;*/
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+
+.autonomo .coracoesVazados img, .autonomo .coracoesPreenchidos img{
+    width:100%;
+    height:100%;
+}
+
+.avaliacaoEstrelas{
+    font-size: 22px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.avaliacaoEstrelas figure{
+    position: absolute;
+    width: 100px;
+    height: 21px;
+}
+
+.avaliacaoEstrelas figure img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+}
+
+.avaliacaoEstrelas .barra{
+
+    width: 100px;
+    height: 20px;
+    background-color: #cfcfcf6e;
+}
+
+.avaliacaoEstrelas .barra div{
+    background-color: var(--Azul-marinho);
+    width: 100%;
+    height: 100%;
+}
+
+#btnContratar{
+    width: 100px;
+    height: 30px;
+    background-color: var(--Roxo);
+    color: white;
+    border: none;
+    border-radius: 10px 2px 10px 2px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 600px){
+    .dadosForm2{
+        flex-direction: column;
+    }
+
+    .sessaoBg main .geral {
+        margin-top: 105px;
+    }
+
+    .autonomosDisponiveis{
+        width: 100%;
+    }
+
+    header main .divBusca{
+        display: none;
+    }
+
+    .autonomo {
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 0 20px 20px 0;
+    }
+
+    .autonomosResultado {
+        flex-direction: column;
+    }
+
+    .imgAutonomo {
+        width: fit-content;
+        border-radius: 20px 0 0 0;
+    }
+}

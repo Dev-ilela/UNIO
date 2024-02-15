@@ -1,0 +1,305 @@
+/*---------------------------------------FORMS----------------------------------*/
+
+/*----------------------------------BACKGROUND FUNDO----------------------------------*/
+
+.sessaoBg{
+    padding: 120px 0 50px;
+}
+
+.sessaoBg main{
+    width: 80%;
+    margin:auto;
+    
+}
+
+/*-------------------------ÁREA DO TÍTULO E DO BOTÃO DE VOLTAR------------------------*/
+
+.tituloCadastroCliente{
+    width:100%;
+    margin-bottom: 4%;
+    display:flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: var(--Bold);
+    color: var(--Magenta);
+}
+
+.tituloCadastroCliente figure{
+    width:18px;
+}
+
+.tituloCadastroCliente a{
+    display: flex;
+    align-content: center;
+}
+
+.tituloCadastroCliente figure img{
+    width:100%;
+}
+
+
+/*--------------------------------AJUSTES GERAIS----------------------------------*/
+
+.sessaoBg main .section_geral{
+    width:90%;
+
+    padding:40px;
+    box-sizing: border-box;
+    margin:auto;
+
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    background-color: var(--Branco);
+
+    /* position: absolute;
+    left:50%;
+    top: 50%; */
+    
+
+    display:flex;
+    flex-direction: column;
+}
+
+.dadosForm1{
+    width:100%;
+
+    display:flex;
+    gap:70px;
+}
+
+.dadosForm1 label{
+    width:100%;
+    margin-bottom: 10px;
+
+    font-size:18px;
+    font-family: var(--Bold);
+    color: var(--Roxo);
+
+    transition:all 300ms;
+}
+
+.coluna1, .coluna2{
+    width:50%;
+
+    display:flex;
+    flex-direction: column;
+}
+
+.divInput figure{
+    height:50%;
+    margin-left:5px;
+}
+
+.divInput figure img{
+    height:100%;
+}
+
+.divInput .inputs::placeholder{
+    color:#A0A0A0;
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+.divInput .inputs:focus{
+    outline: none;
+}
+
+.senha{
+    display:flex;
+    flex-direction: column;
+}
+
+.avisoInput {
+    position: relative;
+}
+  
+#aviso-icon {
+    cursor: pointer;
+    height: 19.22px;
+    margin-left: 5px;
+}
+
+.popupAviso {
+    background-color: #f9f9f9;
+    width: 170px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    top: 80%;
+    left: 50%;
+
+    border: 1px solid #ccc;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.3s, bottom 0.3s;
+    z-index: 1;
+}
+  
+.avisoInput:hover .popupAviso {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+
+}
+
+/*----------------------------SOMENTE SOBRE A COLUNA 1------------------------*/
+
+.coluna1 .divInput{
+    height: 40px;
+    max-width:100%;
+
+    margin-top:3px;
+    display:flex;
+    align-items: center;
+
+    color: #0B0B22;
+}
+
+.coluna1 .divInput .inputs{
+    height:100%;
+    width:100%;
+    padding-left:10px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border:none;
+
+    background-color: #F2F2FC;
+
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+/*----------------------------SOMENTE SOBRE A COLUNA 2------------------------*/
+
+.coluna2 .divInput{
+    height: 40px;
+    max-width:100%;
+
+    margin-top:3px;
+    display:flex;
+    align-items: center;
+
+    color: #0B0B22;
+}
+
+.coluna2 .divInput .inputs{
+    height:100%;
+    width:100%;
+    padding-left:10px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border:none;
+
+    background-color: #F2F2FC;
+
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+.coluna2 p{
+    margin-top:10px;
+    color:#7C7C7C;
+    font-family: var(--Regular);
+    font-size: 12px;
+    
+}
+
+.coluna2 span {
+    color: #cb294e;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.coluna2 #btnCriarPerfil {
+    max-width: 30%;
+    margin-top: 30px;
+    background-color: var(--Magenta);
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 3px;
+    font-family: var(--Regular);
+    font-size: var(--Regular);
+    padding: 10px;
+    box-sizing: border-box;
+    color: var(--Branco) !important;
+    cursor: pointer;
+}
+
+    .coluna2 #btnCriarPerfil a {
+        color: var(--Branco) !important;
+    }
+
+
+
+@media screen and (max-width: 600px) {
+
+    /*----------------------------------BACKGROUND FUNDO----------------------------------*/
+
+    .sessaoBg {
+        padding: 120px 0;
+        margin: auto;
+        width: 85%;
+    }
+
+        .sessaoBg main {
+            width: 100%;
+        }
+
+    /*-------------------------ÁREA DO TÍTULO E DO BOTÃO DE VOLTAR------------------------*/
+
+    .tituloCadastroCliente {
+        margin-bottom: 12%;
+        font-size: 12px;
+    }
+
+    /*--------------------------------AJUSTES GERAIS----------------------------------*/
+
+    .sessaoBg main .section_geral {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .dadosForm1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .dadosForm1 label {
+        margin-bottom: 18px;
+        font-size: 16px;
+        font-family: var(--Semi-bold);
+        color: #2b2b2b;
+    }
+
+    .coluna1, .coluna2 {
+        width: 100%;
+    }
+
+        .coluna2 #btnCriarPerfil {
+            min-width: 40%;
+        }
+
+    .popupAviso {
+        width: 65px;
+        left: -53%;
+    }
+}

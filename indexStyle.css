@@ -1,0 +1,817 @@
+/* ------------------------------------ SESSAO 1 ----------------------------------------*/
+
+#iptBusca:focus{
+    outline: none;
+    color:rgb(26, 26, 26);
+}
+
+.sessao1{
+    height: 95vh;
+    position:relative;
+
+    background: url(../imagens/backgrounds/bg_index1.svg);
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+}
+
+.sessao1 .elemento10_2{
+    position:absolute;
+
+    width: 210px;
+    right: 0px;
+    top: 4px;
+}
+
+.sessao1 .elemento10_2 img{
+    width:100%;
+}
+
+.sessao1 .elemento09{
+    position:absolute;
+
+    width: 220px;
+    bottom: -110px;
+    right: 0;
+}
+
+.sessao1 .elemento09 img{
+    width:100%;
+}
+
+.sessao1 .elemento12{
+    position:absolute;
+
+    width:7%;
+    bottom: -4px;
+    left:0;
+}
+
+.sessao1 .elemento12 img{
+    width:100%;
+}
+
+
+.sessao1 main{
+    width: 80%;
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.sessao1 main div figure{
+    width: 75px;
+}
+
+.sessao1 main div figure img{
+    width: 100%;
+}
+
+.sessao1 main div h1{
+    font-size: 40px;
+    color: #fff;
+
+    font-family: var(--Light);
+}
+
+.sessao1 main div h1 b{
+    font-family: var(--Bold-italic);
+}
+
+#btnSaibaMais{
+    padding: 10px 15px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    border: none;
+
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 5px;
+
+    background-image: linear-gradient( 135deg, var(--Magenta) 40%, #763389 100%, var(--Azul-fundo));
+
+    font-family: var(--Semi-bold);
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+
+
+
+/* ------------------------------------ SESSAO 2 ----------------------------------------*/
+
+
+.sessao2{
+    position:relative;
+    padding: 70px 0;
+}
+
+.sessao2 .elemento18{
+    position: absolute;
+    width:1.5%;
+    left:0;
+    top: 50px;
+}
+
+.sessao2 .elemento18 img{
+    width:100%;
+}
+
+.sessao2 .elemento02{
+    position:absolute;
+    width:13%;
+    bottom:-125px;
+    right:0;
+}
+
+.sessao2 .elemento02 img{
+    width:100%;
+}
+
+.sessao2 main{
+    width: 80%;
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessao2 main div#s2_geral{
+    height: 95%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+#s2_elemento{
+    width: 50px;
+}
+
+#s2_elemento img{
+    width: 100%;
+}
+
+.sessao2 main h2{
+    font-family: var(--Regular);
+    font-size: 28px;
+
+    text-align: center;
+
+    color: #26256B;
+
+    margin: 60px 0;
+}
+
+.sessao2 main div.s2_gp_articles{
+
+    /* height: 60%; */
+
+    width: 90%;
+
+    display: flex;
+
+    /* justify-content: space-between; */
+    justify-content: center; 
+    align-items: center;
+}
+
+.s2_article {
+    /* height: 370px; */
+    width: 33%;
+    margin: 0 20px;
+    background-color: #763389;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    transition: linear;
+    transition-duration: 0.2s;
+    aspect-ratio: 1/1.5;
+}
+
+.s2_article:hover{
+    transform: scale(1.1);
+}
+
+#s2_art1{
+    background: url(../imagens/outras_imagens/bg_s2_art1.svg);
+    background-position: top center;
+    background-size: 200%;
+}
+
+#s2_art2{
+    background: url(../imagens/outras_imagens/bg_s2_art2.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.s2_article div.filtro{
+    height: 100%;
+    width: 100%;
+
+    padding: 15px;
+    box-sizing: border-box;
+
+    /* background: linear-gradient(to top, var(--Azul-fundo) -20%, transparent 150%); */
+    background-color: #223dc382;
+    
+
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    transition: linear;
+    transition-duration: 0.5s;
+}
+
+.s2_article:hover div.filtro{
+    background: linear-gradient(to top, #cb294eb3 -15%, transparent 80%);
+}
+
+.s2_gp_art{
+    min-height: 30%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;       
+}
+
+.s2_gp_art h3{
+    font-family: var(--Regular);
+    color: #fff;
+
+    font-size: 25px;
+}
+
+.s2_gp_art p{
+    font-family: var(--Regular);
+    color: #fff;
+
+    font-size: 19px;
+}
+
+.s2_gp_art button{
+    cursor:pointer;
+    margin-top: 15px;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    
+    border: none;
+
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 5px;
+
+    background-image: linear-gradient( to right, var(--Azul-marinho) 30%, #2462EC 90%);
+
+    font-family: var(--Semi-bold);
+    font-size: 18px;
+
+    color: #fff;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.167);
+
+    transition-duration: 0.2s;
+}
+
+.s2_article:hover div.filtro div button{
+    background-image: linear-gradient( to right, var(--Magenta) 10%, #ED6181 90%);
+}
+
+#s2_art1 div.filtro .s2_gp_art, #s2_art2 div.filtro .s2_gp_art, #s2_art3 div.filtro .s2_gp_art {
+    align-items: center;
+    text-align: center;
+}
+
+
+#s2_art2 div.filtro .s2_gp_art button, #s2_art3 div.filtro .s2_gp_art button{
+    border-bottom-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+
+    border-top-left-radius: 5px !important;
+    border-bottom-right-radius: 0 !important;
+
+}
+
+
+#s2_art3{
+    background: url(../imagens/outras_imagens/bg_s3_div.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* ------------------------------------ SESSAO 3 ----------------------------------------*/
+
+
+.sessao3{
+    height: 92vh;
+    width: 100%;
+    overflow-y: hidden;
+    background-repeat: repeat;
+    background-size: 15px 15px;
+
+}
+
+.sessao3 div.s3_filtro{
+    width: 100%;
+    height: 100%;
+
+    /* background-color: #fff;
+    background: linear-gradient(to right, #223dc37f -150%, #ffffff 75%); */
+}
+
+.sessao3 main{
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    margin: auto;
+
+    /* background-color: #2462EC; */
+
+    display: flex;
+}
+
+.s3_esquerda{
+    height: 100%;
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.s3_esquerda h2, .s3_esquerda div#s3_elemento{
+    width: 100%;
+}
+
+.s3_esquerda h2{
+    height: 25%;
+
+    font-size: 28px;
+    font-family: var(--Regular);
+    color: var(--Roxo);
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s3_esquerda div#s3_elemento{
+    height: 75%;
+
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.s3_esquerda div#s3_elemento img{
+    height: 130%;
+    margin: auto;
+}
+
+.s3_direita{
+    height: 100%;
+    width: 40%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s3_direita div.borda{
+    height: 80%;
+    width: 70%;
+
+    padding: 10px;
+    box-sizing: border-box;
+
+    background-image: linear-gradient(135deg, var(--Azul-marinho) 30%, #2462EC 90%);
+
+    border-radius: 15px;
+}
+
+.s3_direita div.borda div.s3_video{
+    height: 100%;
+    width: 100%;
+
+    /*background: url(../imagens/outras_imagens/bg_s3_div.webp);*/
+    background-position: 67% center;
+    background-size: 335%;
+    backdrop-filter: saturate(0.5);
+
+    transform: scaleX(-1);
+
+    border-radius: 15px;
+}
+
+div.s3_video div{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+
+    background-color: #223dc37f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.s3_video div img{
+    height: 15%;
+    transform: scaleX(-1);
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ------------------------------------ SESSAO 4 ---------------------------------------- */
+
+.sessao4{
+    height: 92vh;
+    width: 100%;
+
+    background: url(../imagens/backgrounds/bg_index2.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.sessao4 main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    background: linear-gradient(to left, rgb(0 47 148 / 81%), rgb(70 95 208 / 19%));
+}
+
+.sessao4 main div.s4_esquerda{
+    width: 50%;
+    height: 100%;
+}
+
+.sessao4 main div.s4_esquerda img{
+    height: 100%;
+    margin-left:-1px;
+}
+
+.sessao4 main div.s4_direita{
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sessao4 main div.s4_direita div.s4_margem{
+    width: 80%;
+    height: 40%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sessao4 main div.s4_direita div.s4_margem div{
+    height: 65%;
+    min-width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.sessao4 main div.s4_direita div.s4_margem div h2{
+    font-size: var(--Subtitulo_1);
+    font-family: var(--Semi-bold);
+    color: #fff;
+}
+
+.sessao4 main div.s4_direita div.s4_margem div p{
+    font-family: var(--Regular);
+    font-size:  var(--Texto-curto);
+
+    color: #fff;
+
+    text-align: left;
+}
+
+.sessao4 main div.s4_direita div.s4_margem div button{
+
+    padding: 10px 15px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: none;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 5px;
+    /* background: #fff; */
+    font-family: var(--Bold);
+    font-size: 18px;
+    color: var(--Magenta);
+}
+
+
+/* ------------------------------------- FOOTER ----------------------------------------*/
+
+footer{
+    height: 25vh;
+    width: 100%;
+
+    background: #D7DBEC;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer div.f_laterais{
+    background: #959FD7;
+
+    width: 35%;
+    height: 28%;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+footer div.f_esquerda{
+    justify-content: flex-start;
+
+    border-bottom-right-radius: 15px;
+}
+
+footer div.f_esquerda div{
+    border-bottom-right-radius: 15px;
+}
+
+footer div.f_direita{
+    justify-content: flex-end;
+
+    border-bottom-left-radius: 15px;
+}
+
+footer div.f_direita div{
+    border-bottom-left-radius: 15px;
+}
+
+
+footer div.f_laterais div{
+    height: 100%;
+    width: 85%;
+
+    background-color: var(--Roxo);
+}
+
+footer div.f_meio{
+    height: 80%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer div.f_meio div{
+    width: 65%;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer div.f_meio div img{
+    width: 50%;
+}
+
+footer div.f_meio p{
+    text-align: center;
+
+    font-family: var(--Regular);
+
+    color: var(--Roxo);
+}
+
+footer div.f_meio p b#f_medium{
+    font-family: var(--Medium) !important;
+}
+
+footer div.f_meio p b#f_semiB{
+    font-family: var(--Semi-bold) !important;
+}
+
+footer div.f_meio div.f_icons{
+    width: 45%;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+footer div.f_meio div.f_icons figure{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div.f_meio div.f_icons figure img{
+    height: 100%;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+    #break{
+        display: none;
+    }
+
+    .elemento10_2, .elemento09, .elemento02, .elemento18 {
+        display: none;
+    }
+
+    .sessao1 {
+    height: 60vh;
+    }
+
+    .sessao1 main {
+    width: 100%;
+    padding: 40px 0 0 30px;
+    box-sizing: border-box;
+    }
+
+    .sessao1 main div figure {
+    width: 35px;
+    }
+
+    .sessao1 main div h1 {
+    font-size: 25px;
+    }
+
+    .sessao2 main h2 {
+    font-size: 20px;
+    margin: 35px 0;
+    }
+
+    .sessao2 main div.s2_gp_articles {
+    display: block;
+    }
+
+    .s2_article {
+    width: 100%;
+    margin: 0 0 30px 0;
+    }
+
+    .sessao3 {
+    height: 100%;
+    }
+
+    .sessao3 main {
+    padding-top: 0px;
+    display: block;
+    }
+
+    .s3_esquerda {
+    width: 100%;
+    display: block;
+    }
+
+    .s3_esquerda h2 {
+    height: 10%;
+    font-size: 25px;
+    margin-bottom: 20px;
+    }
+
+    .s3_esquerda div#s3_elemento {
+    height: 450px;
+    }
+
+    .s3_esquerda div#s3_elemento img {
+    height: 98%;
+    }
+
+    .s3_direita {
+    width: 100%;
+    position: relative;
+    top: -114px;
+    }
+
+    .s3_direita div.borda {
+    width: 90%;
+    }
+
+    .sessao4 {
+    height: 60vh;
+    width: 100%;
+    background: url(../imagens/backgrounds/bg_index2.svg);
+    /* margin-top: 20px; */
+    background-size: 200%;
+    }
+
+    .sessao4 main {
+    /* width: 100%; */
+    /* height: 100%; */
+    display: flex;
+    margin: auto;
+    background: linear-gradient(to left, rgb(0 47 148 / 81%), rgb(70 95 208 / 24%));
+    padding: 25px 0px;
+    }
+
+    .s4_esquerda {
+    display: none;
+    }
+
+    .sessao4 main div.s4_direita {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    }
+
+    .sessao4 main div.s4_direita div.s4_margem {
+    width: 100%;
+    height: 100%;
+    display: block;
+    }
+
+    .sessao4 main div.s4_direita div.s4_margem div {
+    height: 100%;
+    justify-content: center;
+    padding-left: 30px;
+    box-sizing: border-box;
+    }
+
+    .sessao4 main div.s4_direita div.s4_margem div h2 {
+        font-size: 25px;
+    }
+
+    .sessao4 main div.s4_direita div.s4_margem div p {
+        font-size: 18px;
+    }
+
+    .sessao4 main div.s4_direita div.s4_margem div button {
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 0px;
+        font-size: 15px;
+    }
+
+    footer div.f_laterais {
+    background: #959FD7;
+    width: 22%;
+    height: 28%;
+    display: flex;
+    align-items: flex-start;
+    }
+
+    footer div.f_meio {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    }
+
+    footer div.f_meio div.f_icons {
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    }
+}

@@ -1,0 +1,556 @@
+/*----------------------------------BACKGROUND FUNDO----------------------------------*/
+h2{
+    padding:10px 0;
+}
+
+html::-webkit-scrollbar {
+    width: 7px;              
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(173, 173, 173);
+    border-radius: 20px;
+}
+
+.sessaoBg main{
+    padding-top: 120px;
+    width: 100%;
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+}
+
+.atualizarDados{
+    width:100%;
+    margin-bottom: 15px;
+    display:flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: var(--Bold);
+    color: var(--Magenta);
+}
+
+.atualizarDados figure{
+    width:18px;
+    cursor:pointer;
+}
+
+.atualizarDados figure img{
+    width:100%;
+}
+
+.sessaoBg main .geral {
+    margin-bottom: 50px;
+    margin-top: 5px;
+    width: 90%;
+    padding: 40px;
+    box-sizing: border-box;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: var(--Branco);
+}
+
+.dadosForm1, .dadosForm2{
+    width:100%;
+
+    display:flex;
+    gap:70px;
+}
+
+.dadosForm1 label, .dadosForm2 label{
+    width:100%;
+
+    font-size: 16px;
+    font-family: var(--Semi-bold);
+
+    transition:all 300ms;
+}
+
+.dadosForm1 label{
+    margin: 15px 0;
+}
+
+.coluna1, .coluna2{
+    width:50%;
+
+    display:flex;
+    flex-direction: column;
+}
+
+.coluna2 {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.divInput .inputs::placeholder{
+    color:#A0A0A0;
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+.divInput .inputs:focus{
+    outline: none;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+/*----------------------------SOMENTE SOBRE A COLUNA 1------------------------*/
+
+.coluna1 .divInput{
+    height:4vh;
+    max-width:100%;
+
+    margin-top:3px;
+    display:flex;
+    align-items: center;
+
+    color: #0B0B22;
+}
+
+.coluna1 .divInput .inputs{
+    height:100%;
+    width:100%;
+    padding-left:10px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border:none;
+
+    background-color: #F2F2FC;
+
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+/*----------------------------SOMENTE SOBRE A COLUNA 2------------------------*/
+
+.coluna2 .divInput{
+    height:4vh;
+    max-width:100%;
+
+    margin-top:3px;
+    display:flex;
+    align-items: center;
+
+    color: #0B0B22;
+}
+
+.coluna2 .divInput .inputs{
+    height:100%;
+    width:100%;
+    padding-left:10px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border:none;
+
+    background-color: #F2F2FC;
+
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+.coluna2 p{
+    margin:10px 0;
+    color:#7C7C7C;
+    font-family: var(--Regular);
+    font-size: 12px;
+}
+
+.botoes{
+    text-align: left;
+}
+
+span{
+    color: var(--Roxo);
+}
+
+.divTextarea{
+    height:13vh;
+    width:100% !important;
+
+    margin-top:3px;
+}
+
+.divTextarea textarea{
+    font-family: var(--Regular);
+    width:100% !important;
+    height: 100px;
+    max-height: 90%;
+
+    padding-top: 10px;
+    padding-left:10px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border:none;
+
+    background-color: #F2F2FC;
+    color:#000000;
+}
+
+textarea::placeholder{
+    color:#A0A0A0;
+    font-family: var(--Regular);
+    font-size: 13px;
+}
+
+.inputs #selectPrazo{
+    width: 100%;
+    margin: 10px 0;
+    border: none;
+    background: #f2f2fc;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#btnPublicar, #btnAutoFavorito, #btnSalvar, #btnSalvarEdicao, #btnEnviar {
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 3px;
+    font-family: var(--Semi-bold);
+    font-size: var(--Regular);
+    color: var(--Branco);
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#btnPublicar, #btnSalvar, #btnEnviar, #btnSalvarEdicao {
+    background-color: var(--Azul-marinho);
+    margin-right: 5px;
+}
+
+#btnAutoFavorito {
+    background-color: var(--Azul-Escuro);
+}
+
+.presencial input[type="radio"] {
+    margin: 10px 5px 10px 0;
+}
+
+
+
+/*----------------------------------Resultados da busca----------------------------------*/
+
+.SemFavoritos{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.SemFavoritos figure{
+    width:20%;
+}
+
+.SemFavoritos figure img{
+    width:100%;
+}
+
+.SemFavoritos h2{
+    margin-top: 15px;
+    font-family: var(--Bold);
+    font-size: 20px;
+    color:var(--Roxo);
+    max-width:318px;
+}
+
+.SemFavoritos p{
+    margin-top: 5px;
+    font-family: var(--Regular);
+    font-size: 14px;
+    max-width: 318px;
+    text-align: center;
+}
+
+.SemFavoritos #btnCriarAnuncio{
+    margin-top: 15px;
+    background: linear-gradient(to top, #1D1D5D 20%, #002E94 90%);
+    border:none;
+    border-top-left-radius:10px;
+    border-bottom-right-radius:10px;
+    color:var(--Branco);
+    font-family: var(--Regular);
+    font-size: 13px;
+    padding: 10px 20px 10px 20px;
+    cursor:pointer;
+}
+
+.autonomosFavoritos{
+    width: 75%;
+    text-align: right;
+}
+
+.autonomosFavoritos .divInput{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-bottom: 10px;
+}
+
+.autonomosFavoritos .divInput input{
+    width: 100%;
+    height: 40px;
+    background-color: #D0D0E8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    border-top-right-radius: 20px;
+    padding: 0 10px;
+}
+
+.autonomosFavoritos input:focus{
+    outline: none;
+    color:rgb(26, 26, 26);
+}
+
+.autonomosFavoritos input::placeholder{
+    color:var(--Branco);
+    font-size: 16px;
+    font-family: var(--Regular);
+}
+
+.divBuscar input{
+    height:100%;
+    width: 97%;
+    background-color: #D0D0E8;
+    border:none;
+    border-radius: 5px;
+    padding-left:10px;
+    
+}
+
+
+
+.autonomosFavoritos .divInput button{
+    width: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 15px 15px 1px;
+    padding: 10px 19px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+.autonomosFavoritos img{
+    width: 20px;
+}
+
+.resultados{
+    height: 500px;
+    overflow-y: scroll;
+    scroll-padding-top: 18px;
+    text-align: left;
+}
+
+.autonomosResultado{
+    color: #0B0B22;
+    display: flex;
+    margin: 18px 10px 18px 0;
+}
+
+.autonomosResultado img{
+    width: 80px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+}
+
+.autonomo{
+    width: 90%;
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0 20px 20px 0;
+    position: relative;
+}
+
+.imgAutonomo{
+    width: 110px;
+    height: 115px;
+    border-radius: 20px 0 0 20px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.autonomo input[type="checkbox"] {
+    width: 15px;
+    height: 20px;
+    margin: 10px;
+    position:absolute;
+    right: 0;
+}
+
+.infoAutonomo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.infoAutonomo img{
+    width: 100px;
+    height: 16px;
+    margin: 2.5px 0;
+}
+
+.infoAutonomo h3{
+    margin: 2.5px 0;
+}
+
+.infoAutonomo .descricao{
+    color: #A0A0A0;
+    font-family: var(--Regular);
+    margin: 2.5px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.avaliacao{
+    font-size: 22px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.avaliacao figure{
+    position: absolute;
+    width: 100px;
+    height: 21px;
+}
+
+.avaliacao figure img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+}
+
+.avaliacao .barra{
+    width: 100px;
+    height: 20px;
+    background-color: #cfcfcf6e;
+}
+
+.avaliacao .barra div{
+    background-color: var(--Azul-marinho);
+    width: 100%;
+    height: 100%;
+}
+
+.mudarPagina{
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnEnviar {
+    margin-top: 20px;
+}
+
+.mudarPagina .pDestacado{
+    background-color: var(--Azul-pastel);
+    padding: 4px 10px;
+    color: white;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.mudarPagina p{
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    header #divBusca {
+        display: none;
+    }
+
+    .buscaMobile {
+        display: block !important;
+        width: 90%;
+    }
+
+    .divBusca {
+        width: 100% !important;
+    }
+
+    .sessaoBg main {
+        flex-direction: column;
+    }
+
+    .geral {
+        margin: 20px 0;
+        margin-top: -20px;
+    }
+
+    .coluna1 .divInput {
+        height: 40px;
+    }
+
+    .dadosForm1, .dadosForm2 {
+        display: block;
+    }
+
+    .coluna1, .coluna2 {
+        width: 100%;
+    }
+
+    .botoes {
+        text-align: center;
+    }
+
+    #btnPublicar, #btnAutoFavorito, #btnSalvar, #btnEnviar, #btnSalvarEdicao {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .autonomosFavoritos {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .autonomosResultado {
+        margin: 18px 0;
+    }
+
+    .resultados {
+        height: 100%;
+        overflow-y: none;
+    }
+
+    .infoAutonomo h3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+

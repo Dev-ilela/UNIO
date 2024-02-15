@@ -1,0 +1,337 @@
+/*----------------------------------SESSÃO DE CADASTRO-----------------------------------*/
+
+.sessaoBg{
+    overflow-y: hidden;
+    height: 100vh;
+    position:relative;
+
+    background: linear-gradient(to top, #223dc37f -100%, #EEEEEF 105%);
+}
+
+.sessaoBg .elemento01{
+    width:105px;
+    position:absolute;
+
+    top:95px;
+    left:20px;
+
+}
+
+.sessaoBg .elemento02{
+    width:105px;
+    position:absolute;
+
+    bottom: 0;
+    right: 10px;
+}
+
+.sessaoBg .elemento02 img{
+    width: 100%;
+    transform: scaleX(-1);
+}
+
+.sessaoBg .elemento01 img{
+    width:100%;
+}
+.Cadastro{
+    width:85%;
+    height:70vh;
+    position:absolute;
+
+    text-align: center;
+
+    top:20%;
+    left:50%;
+    transform:translate(-50%);
+}
+
+.Cadastro h1{
+    color:var(--Roxo);
+
+    font-family: var(--Bold);
+    font-size: 30px;
+
+    margin-bottom: 40px;
+}
+
+.gp_divs{
+    
+    height: 70vh;
+
+    display:flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.cliente, .autonomo{
+    background-color: #763389;
+
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    transition: linear;
+    transition-duration: 0.2s;
+    filter: drop-shadow(2px 2px 1px rgb(145, 145, 145));
+}
+
+.cliente:hover{
+    transform: scale(1.1);
+}
+
+.autonomo:hover{
+    transform: scale(1.1);
+}
+
+#cliente_art{
+    width: 400px;
+    height: 50vh;
+
+    background: url(../imagens/outras_imagens/cliente.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+#autonomo_art{
+    width: 400px;
+    height: 50vh;
+
+    background: url(../imagens/outras_imagens/autonomo.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.cliente div.filtro{
+    height: 100%;
+    width: 100%;
+
+    padding: 15px;
+    box-sizing: border-box;
+
+    background-color: #cb294f77;
+
+    /* background: linear-gradient(to top, var(--Magenta) -20%, transparent 121%); */
+
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    position:relative;
+
+    justify-content: flex-end;
+
+    transition: linear;
+    transition-duration: 0.5s;
+}
+
+.cliente div.filtro figure{
+    position: absolute;
+    width: 105px;
+    left: -84px !important; 
+    bottom: -22px !important;
+}
+
+.cliente div.filtro figure img{
+    width:100%;
+}
+
+.autonomo div.filtro{
+    height: 100%;
+    width: 100%;
+
+    padding: 15px;
+    box-sizing: border-box;
+
+    background-color: #223fc386;
+
+    /* background: linear-gradient(to top, var(--Roxo) -20%, transparent 170%); */
+
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    position:relative;
+
+    justify-content: flex-end;
+
+    transition: linear;
+    transition-duration: 0.5s;
+}
+
+.autonomo div.filtro figure{
+    position: absolute;
+    width: 100px;
+    top: -71px !important;
+    right: -50px !important;
+}
+
+.autonomo div.filtro figure img{
+    width:100%;
+}
+
+.cliente:hover div.filtro{
+    background: linear-gradient(to top, var(--Magenta) -15%, transparent 80%);
+}
+
+.autonomo:hover div.filtro{
+    background: linear-gradient(to top, var(--Roxo) -15%, transparent 80%);
+}
+
+.divTextos{
+    min-height: 30%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;       
+}
+
+.divTextos h2{
+    font-family: var(--Light);
+    color: #fff;
+    
+    font-family: var(--Semi-bold);
+    font-size: var(--Subtitulo_2);
+}
+
+.divTextos h3{
+    font-family: var(--Light);
+    color: #fff;
+    font-size: var(--Texto-curto);
+}
+
+
+.divTextos button{
+    height: 45px;
+    max-width: 80%;
+
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    
+    border: none;
+
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 5px;
+
+    background-color: var(--Branco);
+
+    font-family: var(--Semi-bold);
+    font-size: 20px;
+
+    color: var(--Roxo);
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.167);
+
+    transition-duration: 0.2s;
+}
+
+.cliente_art div.filtro .divTextos{
+    align-items: flex-start;
+    text-align: start;
+}
+
+.autonomo_art div.filtro .divTextos{
+    align-items: flex-start;
+    text-align: start;
+}
+
+.autonomo_art div.filtro .divTextos{
+    align-items: center;
+    text-align: center;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    .sessaoBg {
+    width: 90%;
+    height: 100vh;
+    position: relative;
+    margin: auto;
+    background: none;
+    overflow-y:clip;
+    }
+
+    .sessaoBg .elemento02 img {
+        display: none;
+    }
+
+    .sessaoBg .elemento01 img {
+        display: none;
+    }
+
+    .Cadastro {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:-150px;
+    }
+
+    .Cadastro h1 {
+        font-size: 25px;
+        margin-top: 90px;
+        margin-bottom: 20px;
+    }
+
+    .gp_divs {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    gap: 5%;
+    }
+
+    #cliente_art {
+    max-width: 270px;
+    margin: auto;
+    max-height: 500px;
+    }
+
+    #autonomo_art {
+    max-width: 270px;
+    margin: auto;
+    max-height: 500px;
+    }
+
+    .cliente div.filtro figure {
+    display: none;
+    }
+
+    .autonomo div.filtro figure {
+    display: none;
+    }
+
+    .divTextos h2 {
+    font-size: 25px;
+    }
+
+    .divTextos h3 {
+    font-size: 16px;
+    }
+
+    button a {
+    font-size: 16px;
+    }
+}
+
+
+

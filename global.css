@@ -1,0 +1,83 @@
+*{
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: var(--Regular);
+}
+
+@font-face {
+    font-family: raleway_regular;
+    src: url(../fonts/Raleway/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: raleway_light;
+    src: url(../fonts/Raleway/Raleway-Thin.ttf);
+}
+
+@font-face {
+    font-family: raleway_light_italic;
+    src: url(../fonts/Raleway/Raleway-ThinItalic.ttf);
+}
+
+@font-face {
+    font-family: raleway_medium;
+    src: url(../fonts/Raleway/Raleway-Medium.ttf);
+}
+
+@font-face {
+    font-family: raleway_semibold;
+    src: url(../fonts/Raleway/Raleway-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: raleway_bold;
+    src: url(../fonts/Raleway/Raleway-Bold.ttf);
+}
+
+@font-face {
+    font-family: raleway_bold_italic;
+    src: url(../fonts/Raleway/Raleway-BoldItalic.ttf);
+}
+
+
+:root{
+
+    /* CORES */
+    --Roxo:         #26256B;
+    --Branco:       #FAFAFA;
+    --Magenta:      #CB294E;
+    --Azul-Escuro:  #1D1D5D;
+    --Azul-Oscuro:  #00147B;
+    --Azul-marinho: #002E94;
+    --Azul-pastel:  #4660D0; 
+    --Azul-fundo:   #223CC3;
+
+    /* TIPOGRAFIA */
+    --Light:        raleway_light;
+    --Medium:       raleway_medium;
+    --Regular:      raleway_regular;
+    --Semi-bold:    raleway_semibold;
+    --Bold:         raleway_bold;
+
+    --Bold-italic:  raleway_bold_italic;
+
+    --Titulo:       50px;
+    --Subtitulo_1:  40px;
+    --Subtitulo_2:  35px;
+    --Texto-curto:  20px;
+    --Texto:        25px; 
+
+}
+
+body{
+    background: linear-gradient(to top, #223dc37f -100%, #EEEEEF 105%);
+    min-height: 100vh;
+}
+
+html::-webkit-scrollbar {
+    width: 7px;              
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(173, 173, 173);
+    border-radius: 20px;
+}

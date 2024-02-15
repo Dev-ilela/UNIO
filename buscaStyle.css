@@ -1,0 +1,179 @@
+/*---------------------------------------BUSCA------------------------------------------*/
+/*----------------------------------BACKGROUND FUNDO----------------------------------*/
+
+.sessaoBg{
+    padding: 120px 0 30px;
+}
+
+.sessaoBg main{
+    width: 80%;
+    height: 100%;
+    margin:auto;
+    
+}
+
+.geral{
+    display: flex;
+    gap: 50px;
+}
+
+.sairPagina{
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px;
+}
+
+.sairPagina img{
+    width: 22px;
+}
+
+.sairPagina p{
+    font-size: 22px;
+    margin: 0 10px;
+    font-weight: bold;
+    color: var(--Azul-Escuro);
+}
+
+/*----------------------------------Área de atuação----------------------------------*/
+
+.filtroTitulo{
+    background-color: var(--Azul-pastel);
+    color: var(--Branco);
+    width: 290px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+
+    text-align: left;
+    padding-left: 10px;
+
+    box-sizing: border-box;
+
+    border-top-right-radius: 20px;
+    border-top-left-radius: 5px;
+}
+
+.filtroTitulo p{
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.filtroAreas{
+    background-color: var(--Branco);
+    width: 290px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 20px;
+
+    text-align: left;
+    padding-left: 20px;
+
+    box-sizing: border-box;
+
+    -webkit-box-shadow: 10px 5px 30px 0px #0000001f;
+    -moz-box-shadow: 10px 5px 30px 0px rgba(209,209,209,1);
+    box-shadow: 5px 4px 19px 0px #0000001f;
+}
+
+.filtroAreas p{
+    font-size: 18px;
+    font-family: var(--Regular);
+    cursor: pointer;
+}
+
+/*----------------------------------Resulados da busca----------------------------------*/
+.SemAnuncios {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.SemAnuncios figure {
+    width: 18%
+}
+
+    .SemAnuncios figure img {
+        width: 100%;
+    }
+
+.SemAnuncios h2 {
+    margin-top: 15px;
+    font-family: var(--Semi-bold);
+    font-size: 20px;
+    color: var(--Roxo);
+    text-align: center;
+    max-width: 318px;
+}
+
+.SemAnuncios p {
+    font-family: var(--Regular);
+    margin-top: 15px;
+    max-width: 318px;
+}
+
+.resultadosBusca{
+    width: 75%;
+}
+
+.resultadosBusca .titulo{
+    font-size: 23px;
+    color: var(--Azul-Escuro);
+    font-family: var(--Regular);
+    margin: 0 0 30px;
+}
+
+.resultadosBusca .resultados{
+    background-color: white;
+    color: #0B0B22;
+    display: block;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 18px 0;
+}
+
+.resultadosBusca .itemResultados{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.resultadosBusca .itemResultados p{
+    font-size: 18px;
+    font-family: var(--Regular);
+}
+
+.itemResultados img{
+    width: 12px;
+}
+
+@media screen and (max-width: 600px) {
+    .sessaoBg main {
+        width: 80%;
+        height: 100%;
+    }
+
+    .geral {
+        display: block;
+        gap: 50px;
+    }
+
+    .resultadosBusca {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+        .resultadosBusca .itemResultados {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+        }
+}

@@ -1,0 +1,473 @@
+    /*---------------------------------------BUSCA------------------------------------------*/
+/*----------------------------------BACKGROUND FUNDO----------------------------------*/
+
+.sessaoBg main{
+    width: 80%;
+    margin:auto;
+}
+
+h2{
+    font-size: 20px;
+}
+
+.geral{
+    padding-top: 140px;
+}
+/*----------------------------------Perfil do autonomo----------------------------------*/
+
+.perfilAutonomo{
+    width: 100%;
+    max-height: 175px;
+    /* background-image: url(../imagens/backgrounds/bg_cross_v2.webp);
+    background-size: 15px 15px;
+    background-repeat: repeat; */
+    border-radius: 20px;
+    padding-bottom: 70px;
+
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(196,196,196,1);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(196,196,196,1);
+    box-shadow: -7px 1px 18px 0px rgb(0 0 0 / 24%);
+}
+
+.bgPerfil{
+    width: 100%;
+    max-height: 175px;
+    background: var(--Branco);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.753) 0%, rgba(255, 255, 255, 0.719) 100%);
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    position: relative;
+    border-radius: 20px;
+    padding-bottom: 70px;
+}
+
+.bgPerfil #coracao{
+    height: 35px;
+    padding: 10px;
+}
+
+.informacoes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacoes #imgAutonomo{
+    width: 135px;
+    border-radius: 50% 50% 8px;
+}
+
+.progressoAutonomo{
+    display: flex;
+    align-items: center;
+}
+
+.informacoes .avaliacaoProgresso{
+    font-size: 22px;
+    margin: 5px 0;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.informacoes .avaliacaoProgresso figure{
+    position: absolute;
+    width: 132px;
+    height: 25px;
+    left: -1px;
+}
+
+.informacoes .avaliacaoProgresso figure img{
+    width: 100%;
+    height: 100%;
+}
+
+.informacoes .avaliacaoProgresso .barra{
+    width: 131px;
+    height: 22px;
+    background-color: #cfcfcf6e;
+}
+
+.informacoes .avaliacaoProgresso .barra div{
+    background-color: var(--Azul-marinho);
+    width: 100%;
+    height: 100%;
+}
+
+.nomeEavalicao .avaliacaoEstrelas{
+    font-size: 22px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nomeEavalicao .avaliacaoEstrelas figure{
+    position: absolute;
+
+    width: 88px;
+    height: 18px;
+    top: -4px;
+    left: -1px;
+}
+
+.nomeEavalicao .avaliacaoEstrelas figure img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+.nomeEavalicao .avaliacaoEstrelas .barra{
+
+    width: 86px;
+    height: 16px;
+
+    background-color: #cfcfcf6e;
+}
+
+.nomeEavalicao .avaliacaoEstrelas .barra div{
+    background-color: var(--Magenta);
+    width: 100%;
+    height: 100%;
+}
+
+.info{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info h2{
+    color: var(--Azul-Escuro);
+    font-family: var(--Bold);
+}
+
+.info p{
+    color: var(--Azul-fundo);
+    margin: 7px 0;
+}
+
+.cidade{
+    display: flex;
+    align-items: center;
+    margin: 5px 0 15px;
+}
+
+.cidade img{
+    width: 15px;
+    margin: 0 10px;
+}
+
+
+/*----------------------------------Emblema do Autonomo----------------------------------*/
+
+.emblemaAutonomo{
+    width: 100%;
+    margin: 45px 0;
+    padding: 15px 0;
+    background: rgb(38,37,107);
+    background: linear-gradient(127deg, rgba(38,37,107,1) 0%, rgba(0,46,148,1) 100%);
+    color:  var(--Branco);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emblemaAutonomo img{
+    width: 80px;
+    margin: 0 10px;
+}
+
+.emblemaAutonomo p{
+    font-size: 20px;
+    font-family: var(--Regular);
+}
+
+/*----------------------------------Sobre o Autonomo----------------------------------*/
+
+.sobreAutonomo{
+    margin: 45px 0;
+}
+.sobreAutonomo h2{
+    margin: 10px 0;
+}
+
+/*----------------------------------Portfolio so Autonomo----------------------------------*/
+
+.portfolioAutonomo{
+    margin: 45px 0;
+}
+
+.portfolioAutonomo div{
+    display: flex;
+}
+
+.portfolioAutonomo img{
+    border: 0.5px solid var(--Azul-pastel);
+    width: 22%;
+    margin: 15px 35px 0 0;
+}
+
+/*----------------------------------Pagamento do Autonomo----------------------------------*/
+
+.pagamentoAutonomo div{
+    display: flex;
+}
+
+.pagamentoAutonomo img{
+    width: 70px;
+    height: 40px;
+    margin: 15px 20px 15px 0;
+}
+
+.pagamentoAutonomo #imgPix{
+    width: 95px;
+}
+
+/*----------------------------------Avaliacao do Autonomo----------------------------------*/
+
+.avaliacaoAutonomo{
+    margin: 45px 0;
+}
+
+.filtroEtitulo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filtros{
+    display:flex;
+    height:40px;
+    gap: 40px;
+}
+
+.filtros div{
+    height:100%;
+    display:flex;
+}
+
+.filtros div div{
+    height:80%;
+    width:100px;
+    display:flex;
+    align-items: center;
+    padding:10px;
+    box-sizing: border-box;
+    background-color: #1D1D5D;
+    color:var(--Branco);
+    border-top-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+#selectAvaliacao{
+    height:80%;
+    width:80px;
+    margin-left:-20px;
+    text-align: center;
+    border-top-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border:none;
+    color:#1D1D5D;
+    font-family: var(--Semi-bold);
+}
+
+#selectData{
+    height:80%;
+    width:120px;
+    margin-left:-52px;
+    text-align: center;
+    border-top-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border:none;
+    color:#1D1D5D;
+    font-family: var(--Semi-bold);
+}
+
+.filtros p{
+    font-family: var(--Medium);
+    font-size: 14px;
+}
+
+.avaliacaoAutonomo .avaliacao{
+    background-color: var(--Branco);
+    border-radius: 20px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.avaliacaoAutonomo .avaliacao img{
+    width: 70px;
+    margin: 0;
+    border-radius: 50%;
+}
+
+.infoGeral{
+    width: 100%;
+    font-size: 16px;
+    font-family: var(--Regular);
+    margin: 0 15px;
+}
+
+.infoCima{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.mudarPagina{
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mudarPagina .pDestacado{
+    background-color: var(--Azul-pastel);
+    padding: 2px 7px 5px 7px;
+    color: white;
+
+    border-top-left-radius: 3px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.mudarPagina p{
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+
+.progressoAutonomo{
+    display: flex;
+    align-items: center;
+}
+
+.avaliacao{
+    font-size: 22px;
+    margin: 5px 0;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.avaliacao figure{
+    position: absolute;
+    width: 172px;
+    height: 25px;
+}
+
+.avaliacao figure img{
+    width: 100%;
+    height: 100%;
+}
+
+.avaliacao .barra{
+    width: 172px;
+    height: 22px;
+    background-color: #cfcfcf6e;
+}
+
+.avaliacao .barra div{
+    background-color: var(--Azul-marinho);
+    width: 100%;
+    height: 100%;
+}
+
+.coracoesVazados, .coracoesPreenchidos{
+    margin: 10px;
+    width: 35px;
+    position: absolute;
+}
+
+.coracoesVazados img, .coracoesPreenchidos img{
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .emblemaAutonomo {
+        width: 100%;
+        padding: 15px 10px;
+        box-sizing: border-box;
+    }
+
+        .emblemaAutonomo img {
+            width: 60px;
+            margin: 0 10px;
+        }
+
+        .emblemaAutonomo p {
+            font-size: 17px;
+            font-family: var(--Regular);
+            text-align: center;
+        }
+
+    .portfolioAutonomo div {
+        display: block;
+    }
+
+    .portfolioAutonomo img {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .pagamentoAutonomo div {
+        display: block;
+    }
+
+    .avaliacaoAutonomo {
+        margin: 45px 0;
+    }
+
+    .filtros {
+        display: block;
+        height: 100%;
+        margin: 15px 0 0;
+    }
+
+        .filtros div {
+            height: 45px;
+            display: flex;
+        }
+
+    .avaliacao {
+        font-size: 22px;
+        margin: 5px 0;
+        margin-left: 5px;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .infoGeral {
+        width: 100%;
+        font-size: 16px;
+        font-family: var(--Regular);
+        margin: 0 15px;
+    }
+
+    .infoCima {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .filtroEtitulo {
+        flex-direction: column;
+    }
+}

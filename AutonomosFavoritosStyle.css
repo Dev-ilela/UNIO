@@ -1,0 +1,267 @@
+/*---------------------------------------BUSCA------------------------------------------*/
+/*----------------------------------BACKGROUND FUNDO----------------------------------*/
+
+.sessaoBg main{
+    width: 80%;
+    margin:auto;
+}
+
+.geral{
+    display: flex;
+    gap: 50px;
+    padding-top: 110px;
+}
+
+.sairPagina{
+    display: flex;
+    align-items: center;
+    margin: 140px 0 20px;
+}
+
+.sairPagina img{
+    width: 22px;
+}
+
+.sairPagina p{
+    font-size: 22px;
+    margin: 0 10px;
+    font-weight: bold;
+    color: var(--Azul-Escuro);
+}
+
+
+/*----------------------------------Resultados da busca----------------------------------*/
+.SemFavoritos{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+
+}
+
+.SemFavoritos figure{
+    width:20%;
+}
+
+.SemFavoritos figure img{
+    width:100%;
+}
+
+.SemFavoritos h2{
+    margin-top: 15px;
+    font-family: var(--Bold);
+    font-size: 20px;
+    color:var(--Roxo);
+    max-width:318px;
+}
+
+.SemFavoritos p{
+    margin-top: 5px;
+    font-family: var(--Regular);
+    font-size: 14px;
+    max-width: 318px;
+    text-align: center;
+}
+
+.autonomosFavoritos{
+    width: 75%;
+}
+
+.autonomosFavoritos .divInput{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-bottom: 10px;
+}
+
+.autonomosFavoritos input{
+    width: 100%;
+    height: 40px;
+    background-color: #D0D0E8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    border-top-right-radius: 20px;
+    padding: 0 10px;
+}
+
+.autonomosFavoritos input:focus{
+    outline: none;
+    color:rgb(26, 26, 26);
+}
+
+.autonomosFavoritos input::placeholder{
+    color:var(--Branco);
+    font-size: 16px;
+    font-family: var(--Regular);
+}
+
+.autonomosFavoritos .divInput #btnBuscaFavoritos {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 15px 15px 1px;
+    padding: 10px 19px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#btnBuscaFavoritos img {
+    width: 10px;
+}
+
+.autonomosFavoritos img{
+    width: 20px;
+}
+
+.autonomosResultado{
+    color: #0B0B22;
+    display: flex;
+    margin: 18px 0;
+}
+
+.autonomosResultado img{
+    width: 110px;
+    border-radius: 20px 0 0 20px;
+}
+
+.autonomo{
+    width: 100%;
+    position:relative;
+    background-color: var(--Branco);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0 20px 20px 0;
+}
+
+.imgAutonomo{
+    width: 110px;
+    height: 115px;
+    border-radius: 20px 0 0 20px;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.infoAutonomo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.infoAutonomo h3 {
+    margin: 2.5px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+}
+
+.infoAutonomo .descricao{
+    color: #A0A0A0;
+    font-family: var(--Regular);
+    margin: 2.5px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.autonomo .coracoesVazados, .autonomo .coracoesPreenchidos{
+    position:absolute;
+    right:0;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+
+.autonomo .coracoesVazados img, .autonomo .coracoesPreenchidos img{
+    width:100%;
+    height:100%;
+}
+
+.avaliacaoEstrelas{
+    font-size: 22px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.avaliacaoEstrelas figure{
+    position: absolute;
+    width: 100px;
+    height: 21px;
+}
+
+.avaliacaoEstrelas figure img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+}
+
+.avaliacaoEstrelas .barra{
+
+    width: 100px;
+    height: 20px;
+    background-color: #cfcfcf6e;
+}
+
+.avaliacaoEstrelas .barra div{
+    background-color: var(--Azul-marinho);
+    width: 100%;
+    height: 100%;
+}
+
+.mudarPagina{
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mudarPagina .pDestacado{
+    background-color: var(--Azul-pastel);
+    padding: 4px 10px;
+    color: white;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.mudarPagina p{
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .geral {
+        display: block;
+    }
+
+    .autonomosFavoritos {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .SemFavoritos{
+        margin-bottom:40px;
+    }
+}
+
+
+

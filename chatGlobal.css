@@ -1,0 +1,476 @@
+/*----------------------------------BACKGROUND FUNDO----------------------------------*/
+
+.sessaoBg{
+    display:flex;
+    justify-content: center;
+}
+
+.sessaoBg main{
+    padding: 0 10%;
+    width: 100%;
+}
+
+/*----------------------------------CHAT----------------------------------*/
+
+.SemAnuncios{
+    height: 90%;
+    width:100%;
+    padding:30px;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    gap:5px;
+    background-color: var(--Branco);
+    border-bottom-left-radius:20px ;
+    cursor:pointer;
+
+}
+
+.SemAnuncios figure{
+    width:70%;
+}
+
+.SemAnuncios figure img{
+    width:100%;
+}
+
+.SemAnuncios h2{
+    font-family: var(--Bold);
+    font-size: 20px;
+    color:var(--Roxo);
+}
+
+.SemAnuncios p{
+    margin-top: 5px;
+    text-align: center;
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+.SemAnuncios #btnProcurarServicos{
+    margin-top: 15px;
+    background: linear-gradient(to top, #1D1D5D 20%, #002E94 90%);
+    border:none;
+    border-top-left-radius:10px;
+    border-bottom-right-radius:10px;
+    color:var(--Branco);
+    font-family: var(--Regular);
+    font-size: 13px;
+    padding: 10px 20px 10px 20px;
+    cursor:pointer;
+}
+.geral{
+    gap: 3%;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+
+.areaChat{
+    width:100%;
+    height: 80%;
+    display:flex;
+    border-radius: 20px;
+}
+
+.janelas{
+    height: 100%;
+    width:30%;
+}
+
+.janelas .busca{
+    height: 10%;
+    width:100%;
+    padding: 15px 10px;
+    display:flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+    border-top-left-radius: 20px;
+}
+
+.janelas .busca .busquePor{
+    width:90%;
+    height:30px;
+    padding-left:10px;
+    border:none;
+    border-radius: 5px;
+    background-color: #E3E3E3;
+}
+
+.busquePor::placeholder{
+    font-family: var(--Regular);
+    color:#26256B;
+}
+
+.busquePor:focus{
+    outline: none;
+}
+
+.janelas .busca #btnBuscar{
+    cursor: pointer;
+    justify-content: center;
+    height: 30px;
+    width: 10%;
+    display:flex;
+    align-items: center;
+    margin-left:-5px;
+    background-color: #E3E3E3;
+    border:none;
+    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+}
+
+.janelas .busca #btnBuscar img{
+    width:15px;
+}
+
+.ativo{
+    background-color: var(--Roxo) !important;
+}
+
+.ativo h3{
+    color:var(--Branco) !important;
+}
+
+.ativo p{
+    color:var(--Branco) !important;
+}
+
+.pessoas{
+    overflow-y: scroll;
+    height: 90%;
+    width:100%;
+    padding:10px;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+    background-color: var(--Branco);
+    border-bottom-left-radius:20px ;
+    cursor:pointer;
+}
+
+.pessoas::-webkit-scrollbar {
+    width: 5px;
+}
+  
+.pessoas::-webkit-scrollbar-thumb {
+    background-color: rgb(173, 173, 173);
+    border-radius: 20px;
+}
+
+.pessoas .principal{
+    width:100%;
+    display:flex;
+    align-items: center;
+    gap:10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color:#F5F5F5;
+    /* border: 0.2px solid #BFBFBF; */
+}
+
+/* .principal:hover{
+    background-color: var(--Roxo);
+}
+
+.principal h3:hover{
+    color:var(--Branco) !important;
+}
+
+.principal p:hover{
+    color:var(--Branco) !important;
+} */
+
+.pessoas .principal div{
+    width: 82%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border:none;
+}
+
+.pessoas figure{
+    width:60px;
+}
+
+.pessoas figure img{
+    width:100%;
+    border-radius:50%;
+}
+
+.principal h3{
+    font-family: var(--Medium);
+    font-size: 16px;
+    color:var(--Roxo);
+    white-space: nowrap;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+}
+
+.principal p{
+    font-family: var(--Regular);
+    font-size: 12px;
+    color: #ABABAB;
+    white-space: nowrap;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.conversas{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EAEAEA;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+
+.conversas .infoPessoa{
+    align-items: center;
+    display:flex;
+    width:90%;
+    justify-content: space-between;
+    padding:15px;
+    border-radius: 10px;
+    background-color: var(--Branco);
+}
+
+.conversas .infoPessoa h1{
+    font-family: var(--Bold);
+    font-size: 18px;
+    color:var(--Roxo);
+}
+
+.conversas .infoPessoa strong{
+    color:var(--Magenta);
+}
+
+.conversas .infoPessoa div{
+    display:flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.conversas .infoPessoa div figure{
+    width:20px;
+}
+
+.conversas .infoPessoa div figure img{
+    width:100%;
+}
+
+.chat{
+    padding: 15px 20px 15px 0;
+    box-sizing: border-box;
+    width: 90%;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.chat::-webkit-scrollbar {
+    width: 5px;
+}
+  
+.chat::-webkit-scrollbar-thumb {
+    background-color: rgb(173, 173, 173);
+    border-radius: 20px;
+}
+
+.msgServiçoIniciado{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.msgServiçoIniciado p{
+    width: fit-content;
+    background-color: rgba(70, 95, 208, 0.6);
+    padding: 5px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 2px;
+    margin: 20px 0;
+    text-align: center;
+    color: var(--Branco);
+    font-size: 16px;
+    font-family: var(--Medium);
+    font-style: italic;
+}
+
+.msgRecebida{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px 0;
+}
+
+.msgRecebida p{
+    font-family: var(--Regular);
+    width: fit-content;
+    background-color: #FFFFFF;
+    padding: 8px 10px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 2px;
+}
+
+.msgEnviada{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.msgEnviada p{
+    font-family: var(--Regular);
+    width: fit-content;
+    background-color: #E9F0FF;
+    padding: 8px 10px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 2px;
+}
+
+.enviarMsg{
+    gap: 10px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.enviarMsg .enviar{
+    background-color: rgba(217, 217, 217, 0.89);
+    width: inherit;
+    padding: 10px 20px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 5px;
+}
+
+.enviar:focus{
+    outline:none;
+}
+
+.enviarMsg #btnEnviar{
+    background-color: rgba(29, 29, 93, 1);
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 3px;
+    font-family: var(--Semi-bold);
+    font-size: var(--Regular);
+    color: var(--Branco);
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#btnProcurar{
+    background-color: var(--Azul-Escuro);
+    border:none;
+    border-top-right-radius: 10px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:3px;
+
+    font-family: var(--Semi-bold);
+    font-size: var(--Regular);
+    color: var(--Branco);
+
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+
+    .geral h2 {
+        display: flex;
+        width: 80%;
+        align-items: center;
+    }
+
+        .geral h2 img {
+            display: block;
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+        }
+
+    .janelas {
+        width: 100%;
+    }
+
+    .conversas .infoPessoa {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+        .conversas .infoPessoa h1 {
+            font-size: 16px;
+        }
+
+    .infoPessoa p {
+        font-size: 14px;
+    }
+
+    .conversas .infoPessoa div {
+        gap: 10px;
+    }
+
+    .busca {
+        border-top-right-radius: 20px;
+    }
+
+    .conversas {
+        width: 100%;
+        padding: 0;
+        padding-bottom: 12px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .chat {
+        font-size: 14px;
+        width: 95%;
+        padding: 0;
+        padding-right: 10px;
+    }
+
+    .msgServiçoIniciado p {
+        font-size: 14px;
+    }
+
+    .enviarMsg {
+        padding-top: 10px;
+    }
+
+    .divBusca{
+        display: none;
+    }
+}

@@ -1,0 +1,528 @@
+/*----------------------------------BACKGROUND FUNDO----------------------------------*/
+
+.sessaoBg main{
+    /* position: absolute;
+    top: 50%;
+    margin-top: -300px; */
+    width: 80%;
+    margin: auto;
+}
+
+.sessaoBg .geral {
+    padding: 130px 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+}
+
+/*----------------------------------------Voltar----------------------------------------*/
+
+.divVoltar{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.divVoltar a{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    width: 15px;
+}
+
+.divVoltar a img{
+    width: 100%;
+}
+
+.divVoltar p{
+    font-size: 20px;
+}
+
+/*----------------------------------Perfil do autonomo----------------------------------*/
+
+.perfilAutonomo {
+    width: 100%;
+    max-height: 175px;
+    background-image: url(../imagens/backgrounds/bg_cross_v2.webp);
+    background-size: 15px 15px;
+    background-repeat: repeat;
+    border-radius: 20px;
+    padding-bottom: 70px;
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(196,196,196,1);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(196,196,196,1);
+    box-shadow: -7px 1px 18px 0px rgb(0 0 0 / 24%);
+}
+
+.bgPerfil {
+    width: 100%;
+    max-height: 175px;
+    background: linear-gradient(180deg, rgb(255 255 255) 20%, rgb(243 243 243 / 97%) 100%);
+    display: flex;
+    border-radius: 20px;
+    padding-bottom: 70px;
+}
+
+.informacoes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacoes #imgAutonomo {
+    height: 135px;
+    object-fit: cover;
+    width: 135px;
+    border-radius: 50% 50% 8px;
+}
+
+.progressoAutonomo {
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .info h2 {
+        color: var(--Azul-Escuro);
+        font-family: var(--Bold);
+        margin: 5px 0;
+    }
+
+    .info .profissao {
+        background-color: var(--Azul-Oscuro);
+        color: white;
+        padding: 5px 15px;
+        border-radius: 5px;
+        margin: 7px 0;
+        display: flex;
+        align-items: center;
+    }
+
+        .info .profissao img {
+            width: 15px;
+            padding-left: 10px;
+        }
+
+        .info .profissao p {
+            font-family: var(--Regular);
+        }
+
+.cidade {
+    display: flex;
+    align-items: center;
+    margin: 5px 0 15px;
+}
+
+    .cidade img {
+        width: 15px;
+        margin: 0 10px;
+    }
+
+/*----------------------------------------Menu Azul-------------------------------------*/
+
+.MenuSobreEmblemas{
+    height: 500px;
+    display: flex;
+    gap: 65px;
+}
+
+.filtroAreas{
+    background-color: var(--Branco);
+    width: 250px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    text-align: left;
+
+    box-sizing: border-box;
+
+    -webkit-box-shadow: 10px 5px 30px 0px #0000001f;
+    -moz-box-shadow: 10px 5px 30px 0px rgba(209,209,209,1);
+    box-shadow: 5px 4px 19px 0px #0000001f;
+}
+
+.filtroAreas p{
+    white-space: nowrap;
+    font-size: 18px;
+    font-family: var(--Regular);
+}
+
+#btnMeuProgresso{
+    border-top-right-radius: 20px !important;
+}
+
+#btnOuro{
+    border-bottom-left-radius: 20px !important;
+}
+
+.filtroAreas div{
+    cursor: pointer;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.filtroSelecionado{
+    font-weight: 700;
+    color: #ffffff;
+    background-color: var(--Azul-pastel);
+}
+
+
+
+/*----------------------------Area Emblemas------------------------------*/
+
+.infoEmblemas{
+    background-color: white;
+    border-radius: 20px 2px 20px 2px;
+    box-shadow: 1px 3px 13px 1px #0000002e;
+    width: 1200px;
+    padding: 25px;
+    margin-bottom:30px;
+}
+.div1{
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    margin-bottom: 17px;
+}
+
+
+.divEmblemaAtual{
+    width:50%;
+    height:200px;
+    padding: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #EAEFFB;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-sizing: border-box;
+
+    font-size: 20px;
+    color: var(--Azul-Oscuro);
+}
+
+.divEmblemaAtual figure{
+    width:120px;
+    margin-bottom: 15px;
+}
+
+.divEmblemaAtual figure img{
+    width:100%;
+}
+
+.descricaoEmblemaAtual{
+    width:50%;
+    display:flex;
+    align-items: center;
+}
+
+.descricaoEmblemaAtual p{
+    font-family: var(--Regular);
+}
+
+.div2{
+    display:flex;
+    align-items: center;
+    width:100%;
+    gap: 40px;
+}
+
+.emblemasConquistados{
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+
+.emblemasConquistados p{
+    color: var(--Roxo);
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-family: var(--Bold);
+}
+
+.emblemasConquistados div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.emblemasConquistados div div{
+    display:flex;
+    flex-direction: column;
+}
+
+.emblemasConquistados div div p{
+   font-family: var(--Medium);
+   color:#232323;
+   font-size: 14px;
+}
+
+.emblemasConquistados figure{
+    width:60px;
+}
+
+.emblemasConquistados figure img{
+    width:100%;
+}
+
+.divGrafico{
+    width:50%;
+    height:200px;
+    padding: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #EAEFFB;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-sizing: border-box;
+}
+
+.divGrafico p{
+    font-family: var(--Regular);
+}
+
+.divGrafico figure{
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.divGrafico figure img {
+    width: 100%;
+}
+
+
+
+/*----------------------------Emblemas------------------------------------*/
+
+.sobreNovato, .sobreBronze, .sobrePrata, .sobreOuro{
+    width: 1200px;
+    height:408px;
+    padding: 25px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px 2px 20px 2px;
+    box-shadow: 1px 3px 13px 1px #0000002e;
+}
+
+.dsNovato, .dsBronze, .dsPrata, .dsOuro{
+    width: 100%;
+    margin-bottom:50px;
+    padding: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:60px;
+    box-sizing: border-box;
+    background-color: #EAEFFB;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.dsNovato p, .dsBronze p, .dsPrata p, .dsOuro p{
+    width:55%;
+    font-family: var(--Regular);
+}
+
+.dsNovato figure, .dsBronze figure, .dsPrata figure, .dsOuro figure {
+    width:19%;
+}
+
+.dsNovato figure img, .dsBronze figure img, .dsPrata figure img, .dsOuro figure img{
+    width:100%;
+}
+
+.barraEicon{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:5px;
+}
+
+.barraEicon div{
+    display:flex;
+    align-items: center;
+    width:100%;
+    gap:5px;
+}
+
+.barraEicon figure{
+    width:26px;
+}
+
+.barraEicon figure img{
+    width: 100%;
+}
+
+.barraNovato, .barraBronze, .barraPrata, .barraOuro{
+    width:97% !important;
+    height:8px;
+    border-radius: 10px;
+    background-color: #E9E9FB;
+    text-align: end;
+}
+
+.barraNovato div, .barraBronze div, .barraPrata div, .barraOuro div{
+    height:100%;
+    width:100%;
+
+    border-radius: 10px;
+    background-image:linear-gradient( to right, #002E94 20%, #CB294E 90%) ;
+
+    transition:all 1000ms !important;
+}
+
+.quantoFaltaNovato, .quantoFaltaBronze, .quantoFaltaPrata, .quantoFaltaOuro{
+    width: 97% !important;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.quantoFaltaNovato p, .quantoFaltaBronze p, .quantoFaltaPrata p, .quantoFaltaOuro p{
+    position:absolute;
+    color:#636363;
+    font-family: var(--Regular);
+    font-size:12px;
+}
+
+
+@media screen and (max-width: 600px) {
+    /*----------------------------------BACKGROUND FUNDO----------------------------------*/
+    .sessaoBg .geral {
+        padding-top: 100px;
+    }
+
+    .MenuSobreEmblemas {
+        gap: 30px;
+    }
+
+    body {
+    background-repeat: no-repeat;
+    }
+
+    .sessaoBg {
+    padding-bottom: 120px;
+    margin: auto;
+    width: 85%;
+    }
+
+    .sessaoBg main {
+        width: 100%;
+    }
+
+    .geral {
+        padding: 100px 0 50px;
+    }
+
+    .divVoltar {
+        margin-bottom: 40px;
+    }
+
+    .info .profissao {
+        width: 90%;
+    }
+
+    .info h2 {
+        font-size: 18px;
+    }
+
+    .informacoes #imgAutonomo {
+        width: 100px;
+    }
+
+    .filtroAreas {
+    width: 100%;
+    }
+
+    .infoEmblemas {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    }
+
+    .MenuSobreEmblemas {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    }
+
+    .div1 {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .divEmblemaAtual {
+    width: 90%;
+    margin-top: 10px;
+    text-align: center;
+    }
+
+    .descricaoEmblemaAtual {
+    width: 90%;
+    }
+
+    .div2 {
+    flex-direction: column;
+    }
+
+    .emblemasConquistados {
+    width: 90%;
+    text-align: center;
+    }
+
+    .divGrafico {
+    width: 90%;
+    margin-bottom: 10px;
+    }
+
+    .sobreNovato, .sobreBronze, .sobrePrata, .sobreOuro {
+    width: 100%;
+    height: 481px;
+    padding: 10px;
+    box-sizing: border-box;
+    }
+
+    .dsNovato, .dsBronze, .dsPrata, .dsOuro {
+    flex-direction: column;
+    width: 90%;
+    gap: 20px;
+    }
+
+    .dsNovato figure, .dsBronze figure, .dsPrata figure, .dsOuro figure {
+        width: 40%;
+    }
+
+    .dsNovato p, .dsBronze p, .dsPrata p, .dsOuro p {
+        width: 100%;
+    }
+
+    .barraEicon {
+    width: 90%;
+    }
+}

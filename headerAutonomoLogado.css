@@ -1,0 +1,278 @@
+@import "global.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--Semi-bold);
+}
+
+a{text-decoration: none; color:var(--Roxo)}
+
+h2{
+    color: var(--Roxo);
+    font-size: 21px;
+    font-family: var(--Bold);
+}
+
+.escondido{display: none !important;}
+
+/* ------------------------------------ HEADER ----------------------------------------*/
+header{
+    width: 100%;
+    height: 75px;
+
+    position: fixed;
+
+    background-color: var(--Azul-fundo);
+
+    box-shadow: 0px 1px 4px 0px #0000002e;
+
+    /* border: inset 1px #000000; */
+
+    z-index: 12;
+}
+
+header main{
+    width: 99%;
+    height: 100%;
+
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.divLogo, .divBusca, .divMenu{
+    height: 100%;
+    /* background-color: brown; */
+}
+
+
+.divLogo{
+    width: 10% !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divLogo img{
+    width: 100%;
+
+    border: 2px var(--Azul-pastel);
+}
+
+.divLogo .logoBolinhas {
+    display: none;
+}
+
+.divMenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divMenu ul{
+    list-style: none;
+    display: flex;
+    max-width: 220px;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.divMenu ul li{
+    display: flex;
+    max-width: 220px;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.divMenu ul li img{
+    height: 25px;
+    margin-left: 30px;
+    cursor:pointer;
+}
+
+.divMenu ul li #imgAutonomo {
+    height: 50px;
+    border-radius: 50% 50% 4px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.aviso_notificacao{
+    width:7px !important;
+    height:7px !important;
+    margin:0;
+    position:absolute;
+    top:-1px;
+    left:-1px;
+}
+
+.liDoPopup{
+    position:relative;
+}
+
+.popupNotificacao{
+    margin:0 !important;
+    position:absolute;
+    right:0;
+    top:40px;
+    width:300px;
+    height: 235px;
+    display:flex;
+    flex-direction: column;
+    background-color: var(--Branco);
+    border-top-left-radius: 3px;
+    border-top-right-radius:10px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 20px;
+    overflow-y: scroll;
+}
+
+.linhaImpar{
+    background-color: #F0F0F0;
+}
+
+.popupNotificacao div{
+    display:flex;
+    align-items: center;
+    gap:10px;
+    padding:10px;
+}
+
+.popupNotificacao p{
+    font-family: var(--Regular);
+    font-size: 12px;
+    color:#414141 !important;
+}
+
+.popupNotificacao strong{
+    color:#414141 !important;
+}
+
+.popupNotificacao div figure{
+    width: 20px !important;
+    height: 28px !important;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popupNotificacao div figure img{
+    margin:0 !important;
+}
+
+.popupNotificacao::-webkit-scrollbar {
+    width: 5px;
+}
+  
+.popupNotificacao::-webkit-scrollbar-thumb {
+    background-color: rgb(173, 173, 173);
+    border-radius: 20px;
+}
+
+/*------------------------------------------Menu-------------------------------------------------*/
+
+.prflAutonomo {
+    position: absolute;
+    top: 108%;
+    /* padding: 5px; */
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 15px 0;
+}
+
+.prflAutonomo .opcao {
+    padding: 10px;
+    border-radius: 15px 0;
+    /* margin: 5px 0; */
+    margin-bottom: 10px;
+    font-family: var(--Medium);
+    background-color: var(--Azul-marinho);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.prflAutonomo img{
+    width: 15px;
+    margin-right: 5px;
+}
+
+.opcaoBtn {
+    background-color: var(--Magenta);
+    color: white;
+    /* margin: 5px 0; */
+    padding: 10px 15px;
+    border-radius: 15px 0;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.informacoes .avaliacaoProgresso{
+    font-size: 22px;
+    margin: 5px 0;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.informacoes .avaliacaoProgresso figure{
+    position: absolute;
+    width: 131px;
+    height: 25px;
+}
+
+.informacoes .avaliacaoProgresso figure img{
+    width: 100%;
+    height: 100%;
+}
+
+.informacoes .avaliacaoProgresso .barra{
+    width: 131px;
+    height: 22px;
+    background-color: #cfcfcf6e;
+}
+
+.informacoes .avaliacaoProgresso .barra div{
+    background-color: var(--Azul-marinho);
+    width: 100%;
+    height: 100%;
+}
+
+.areaMenu{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+}
+
+@media screen and (max-width: 600px) {
+    .logoBolinhas {
+        display: block !important;
+    }
+
+    .logo_padrao {
+        display: none;
+    }
+
+    .prflAutonomo {
+        background-color: #002f94b9;
+    }
+
+        .prflAutonomo .opcao {
+            background-color: #002f9400 !important;
+        }
+}

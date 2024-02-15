@@ -1,0 +1,541 @@
+/*---------------------------------------FORMS----------------------------------*/
+
+/*----------------------------------BACKGROUND FUNDO----------------------------------*/
+
+.sessaoBg {
+    padding-top: 120px;
+}
+
+.sessaoBg main {
+    width: 80%;
+    margin: auto;
+}
+
+/*--------------------------------AJUSTES GERAIS----------------------------------*/
+
+.sessaoBg main .section_geral{
+    width:90%;
+
+    padding:40px;
+    box-sizing: border-box;
+    margin: auto auto 50px auto;
+
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    background-color: var(--Branco);
+
+    /* position: absolute;
+    left:50%;
+    top: 50%; */
+    
+
+    display:flex;
+    flex-direction: column;
+}
+
+.divisoraEtapas{
+    padding: 5px;
+    width:100%;
+    height: 370px;
+    overflow: hidden;
+}
+
+.labelErro {
+    font-size: 15px;
+    color: var(--Magenta);
+}
+
+.slides {
+    width: 200%;
+    display: flex;
+    gap: 10px;
+}
+
+.dadosForm1, .dadosForm2{
+    width:100%;
+    height: 326px;
+    display:flex;
+    gap:70px;
+}
+
+.dadosForm1 label, .dadosForm2 label{
+    width:100%;
+    margin-bottom: 10px;
+
+    font-size:18px;
+    font-family: var(--Bold);
+    color: var(--Roxo);
+}
+
+.coluna1, .coluna2{
+    width:50%;
+
+    display:flex;
+    flex-direction: column;
+}
+
+.divInput figure{
+    height:50%;
+    margin-left:5px;
+}
+
+.divInput figure img{
+    height:100%;
+}
+
+.divInput .inputs::placeholder{
+    color:#A0A0A0;
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+.divInput .inputs:focus{
+    outline: none;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+.avisoInput {
+    position: relative;
+}
+  
+#aviso-icon {
+    cursor: pointer;
+    height: 19.22px;
+    margin-left: 5px;
+}
+
+.popupAviso {
+    background-color: #f9f9f9;
+    color: black;
+    width: 170px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    top: 80%;
+    left: 50%;
+
+    border: 1px solid #ccc;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.3s, bottom 0.3s;
+    z-index: 1;
+}
+  
+.avisoInput:hover .popupAviso {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+
+}
+
+
+/*-------------------------ÁREA DO TÍTULO E DO BOTÃO DE VOLTAR------------------------*/
+
+.tituloCadastroAutonomo{
+    width:100%;
+    margin-bottom: 75px;
+    display:flex;
+    align-items: center;
+    font-family: var(--Bold);
+    color: var(--Azul-marinho);
+    gap: 10px;
+}
+
+.tituloCadastroAutonomo a{
+    display: flex;
+    align-items: center;
+}
+
+.tituloCadastroAutonomo figure{
+    width:18px;
+}
+
+.tituloCadastroAutonomo figure img{
+    width:100%;
+}
+
+
+
+
+/*----------------------------SOMENTE SOBRE A COLUNA 1 (de ambas as partes do forms)------------------------*/
+.coluna1 .divInput{
+    height:40px;
+    max-width:100%;
+
+    margin-top:3px;
+    display:flex;
+    align-items: center;
+
+    color:#0000002e;
+}
+
+.coluna1 .divInput .inputs{
+    height:100%;
+    width:100%;
+
+    padding-left:10px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border:none;
+
+    background-color: #F2F2FC;
+
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+.formasTrabalho{
+    height:4vh;
+    max-width:100%;
+
+    margin-top:3px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formasTrabalho div{
+    display:flex;
+}
+
+.formasTrabalho p{
+    margin-left: 4px;
+    font-family: var(--Regular);
+    font-size: 14px;
+    color:#232323;
+}
+
+.divTextarea{
+    height:10vh;
+    width:100% !important;
+
+    margin-top:3px;
+}
+
+.divTextarea textarea{
+    width:100% !important;
+    min-height:150px;
+
+    padding-top: 10px;
+    padding-left:10px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border:none;
+
+    background-color: #F2F2FC;
+    color: #232323;
+}
+
+textarea::placeholder{
+    color:#A0A0A0;
+    font-family: var(--Regular);
+    font-size: 13px;
+}
+
+/*----------------------------SOMENTE SOBRE A COLUNA 2 (de ambas as partes do forms)------------------------*/
+.coluna2 .divInput{
+    height:40px;
+    max-width:100%;
+
+    margin-top: 3px;
+    display:flex;
+    align-items: center;
+
+    color:#0000002e;
+}
+
+.coluna2 .divInput .inputs{
+    height:100%;
+    width:100%;
+    padding-left:10px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border:none;
+
+    background-color: #F2F2FC;
+
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+
+.coluna2 p{
+    margin-top:10px;
+
+    color:#7C7C7C;
+    font-family: var(--Regular);
+    font-size: 12px;
+}
+
+.formasPagamento{
+    height:20vh;
+    max-width:100%;
+
+    display:flex;
+    flex-direction: column;
+}
+
+.formasPagamento div{
+    height:100%;
+    display:flex;
+    align-items: center !important;
+    
+}
+
+.formasPagamento p{
+    margin-left: 4px;
+    margin-top:-0.1px;
+
+    font-family: var(--Regular);
+    font-size: 14px;
+    color:#232323;
+}
+
+/*-----------------------------ÁREA DA BARRA E DO BOTÃO----------------------------*/
+
+.barraEbutton{
+    width:100%;
+    height:40px;
+    display:flex;
+    gap:70px;
+}
+
+.barraEbutton img{
+    width:10px;
+    margin-right: 10px;
+    margin-bottom: -5px;
+    cursor:pointer;
+}
+
+.barraEbutton div{
+    width: 50%;
+    display: flex;
+    align-items: end;
+}
+
+#btnCriarPerfil a{
+    color: var(--Branco);
+}
+
+.barraEbutton #btnContinuar, #btnCriarPerfil{
+    
+    min-width:30%;
+    margin-top:80px;
+
+    background-color: var(--Magenta);
+
+    border:none;
+    border-top-right-radius: 10px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:3px;
+
+    font-family: var(--Regular);
+    font-size: var(--Regular);
+    color: var(--Branco);
+
+    padding: 10px;
+    box-sizing: border-box;
+
+    cursor:pointer;
+}
+
+.barra{
+    width:90% !important;
+    height:5px;
+    border-radius: 10px;
+    background-color: #E9E9FB;
+}
+
+.barra div{
+    height:100%;
+    width: 0;
+
+    border-radius: 10px;
+    background-image:linear-gradient( to right, #223CC3 20%, var(--Roxo) 90%) ;
+
+    transition:all 1000ms !important;
+}
+
+.lblFormasPagamento{
+    display: flex;
+    gap: 3%
+}
+
+/*@media screen and (max-width: 600px){
+
+    .popupAviso {
+        top: 100%;
+        left: -73px;
+    }
+
+    .tituloCadastroAutonomo {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+    .dadosForm1 label, .dadosForm2 label {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-family: var(--Semi-bold);
+        color: #2b2b2b;
+    }
+
+    .sessaoBg main .section_geral {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        margin: auto auto 50px auto;
+        border-top-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        background-color: var(--Branco);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .divisoraEtapas {
+        padding: 0px;
+        width: 100%;
+        height: 370px;
+        overflow: scroll;
+    }
+
+    .slides {
+        flex-direction: column;
+    }
+
+    .dadosForm1, .dadosForm2 {
+        gap: 0px;
+        flex-direction: column;
+    }
+
+    .coluna1, .coluna2 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dadosForm1 label, .dadosForm2 label {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-family: var(--Semi-bold);
+        color: #2b2b2b;
+    }
+
+    #progresso {
+        display: none;
+    }
+
+    .barraEbutton {
+        height: 55px;
+    }
+
+    .slides{
+        width: 100%;
+    }
+
+    .dadosForm2{
+        display: none;
+    }
+}*/
+@media screen and (max-width: 600px) {
+    /*----------------------------------BACKGROUND FUNDO----------------------------------*/
+
+    .sessaoBg {
+        padding: 120px 0;
+        margin: auto;
+        width: 85%;
+    }
+
+        .sessaoBg main {
+            width: 100%;
+        }
+
+    /*-------------------------ÁREA DO TÍTULO E DO BOTÃO DE VOLTAR------------------------*/
+
+    .tituloCadastroAutonomo {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+    /*--------------------------------AJUSTES GERAIS----------------------------------*/
+
+    .sessaoBg main .section_geral {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .divisoraEtapas {
+        padding: 5px;
+        width: 100%;
+        height: 630px;
+    }
+
+    .dadosForm1, .dadosForm2 {
+        width: 100%;
+        height: 0;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .dadosForm1 label, .dadosForm2 label {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: var(--Semi-bold);
+    color: #2b2b2b;
+    }
+
+    .coluna1, .coluna2 {
+        width: 100%;
+    }
+
+    .popupAviso {
+        width: 65px;
+        left: -53%;
+    }
+
+    /*----------------------------SOMENTE SOBRE A COLUNA 1 (de ambas as partes do forms)------------------------*/
+
+    .formasTrabalho {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 46px;
+        margin-bottom: 20px;
+    }
+
+        .formasTrabalho div {
+            margin-bottom: 21px;
+        }
+
+    .divTextarea textarea {
+        min-height: 10vh;
+        width: 100% !important;
+    }
+
+    .botao{
+        justify-content:flex-end;
+    }
+
+    .barraEbutton{
+        gap: normal;
+    }
+}

@@ -1,0 +1,373 @@
+@import "global.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--Semi-bold);
+}
+
+a{text-decoration: none; color:var(--Roxo)}
+
+h2{
+    color: var(--Roxo);
+    font-size: 25px;
+    font-family: var(--Bold);
+}
+
+.escondido{display: none !important;}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+/* ------------------------------------ HEADER ----------------------------------------*/
+header{
+    width: 100%;
+    height: 8vh;
+
+    position: fixed;
+
+    background-color: var(--Azul-fundo);
+
+    box-shadow: 0px 1px 4px 0px #0000002e;
+
+    /* border: inset 1px #000000; */
+
+    z-index: 10;
+}
+
+header main{
+    width: 99%;
+    height: 100%;
+
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.divLogo, .divBusca, .divMenu{
+    height: 100%;
+    /* background-color: brown; */
+}
+
+
+.divLogo{
+    width: 10% !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divLogo img{
+    width: 100%;
+
+    border: 2px var(--Azul-pastel);
+}
+.divMenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divMenu ul{
+    list-style: none;
+    display: flex;
+    max-width: 220px;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.divMenu ul li{
+    display: flex;
+    max-width: 220px;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.divMenu ul li img{
+    height: 25px;
+    margin-left: 30px;
+    cursor:pointer;
+}
+
+.divMenu ul li #imgCliente{
+    height: 50px;
+    border-radius: 50% 50% 4px;
+}
+
+/*------------------------------------------Menu-------------------------------------------------*/
+
+.prflCliente {
+    position: absolute;
+    top: 100%; 
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.prflCliente .opcao {
+    padding: 10px;
+    border-radius: 15px 0;
+    margin: 5px 0;
+    font-family: var(--Medium);
+    background-color: var(--Azul-marinho);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+  
+.prflCliente img{
+    width: 15px;
+    margin-right: 5px;
+}
+
+.opcaoBtn{
+    background-color: var(--Magenta);
+    color: white;
+    margin: 5px 0;
+    padding: 10px 15px;
+    border-radius: 15px 0;
+    border: none;
+    font-size: 16px;
+}
+
+/*----------------------------------BACKGROUND FUNDO----------------------------------*/
+
+.sessaoBg{
+    background: linear-gradient(to top, #223dc37f -100%, #EEEEEF 105%);
+
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+}
+
+.sessaoBg main{
+    width: 100%;
+    margin:auto;
+    
+}
+
+.geral{
+    margin: 190px 0 70px;
+}
+
+.atualizarDados{
+    width:100%;
+    margin-bottom: 75px;
+    display:flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: var(--Bold);
+    color: var(--Magenta);
+}
+
+.atualizarDados figure{
+    width:18px;
+}
+
+.atualizarDados figure img{
+    width:100%;
+}
+
+.sessaoBg main .geral{
+    width:90%;
+
+    padding:40px;
+    box-sizing: border-box;
+    margin: auto;
+
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    background-color: var(--Branco);
+    
+
+    display:flex;
+    flex-direction: column;
+}
+
+.dadosForm1{
+    width:100%;
+
+    display:flex;
+    gap:70px;
+}
+
+.dadosForm1 label{
+    width:100%;
+    margin-bottom: 20px;
+
+    font-size:18px;
+    font-family: var(--Bold);
+    color: var(--Roxo);
+
+    transition:all 300ms;
+}
+
+.coluna1, .coluna2{
+    width:50%;
+
+    display:flex;
+    flex-direction: column;
+}
+
+.divInput figure{
+    height:50%;
+    margin-left:5px;
+}
+
+.divInput figure img{
+    height:100%;
+}
+
+.divInput input::placeholder{
+    color:#A0A0A0;
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+.senha{
+    display:flex;
+    flex-direction: column;
+}
+
+.avisoInput {
+    position: relative;
+}
+  
+#aviso-icon {
+    cursor: pointer;
+    height: 19.22px;
+    margin-left: 5px;
+}
+
+.popupAviso {
+    background-color: #f9f9f9;
+    width: 170px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    top: 80%;
+    left: 50%;
+
+    border: 1px solid #ccc;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.3s, bottom 0.3s;
+    z-index: 1;
+}
+  
+.avisoInput:hover .popupAviso {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+
+}
+
+/*----------------------------SOMENTE SOBRE A COLUNA 1------------------------*/
+
+.coluna1 .divInput{
+    height:4vh;
+    max-width:100%;
+
+    margin-top:3px;
+    display:flex;
+    align-items: center;
+
+    color: #0B0B22;
+}
+
+.coluna1 .divInput .inputs{
+    height:100%;
+    width:100%;
+    padding-left:10px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border:none;
+
+    background-color: #F2F2FC;
+
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+/*----------------------------SOMENTE SOBRE A COLUNA 2------------------------*/
+
+.coluna2 .divInput{
+    height:4vh;
+    max-width:100%;
+
+    margin-top:3px;
+    display:flex;
+    align-items: center;
+
+    color: #0B0B22;
+}
+
+.coluna2 .divInput .inputs{
+    height:100%;
+    width:100%;
+    padding-left:10px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border:none;
+
+    background-color: #F2F2FC;
+
+    font-family: var(--Regular);
+    font-size: 14px;
+}
+
+.coluna2 p{
+    margin-top:10px;
+    color:#7C7C7C;
+    font-family: var(--Regular);
+    font-size: 12px;
+}
+
+.coluna2 button{
+    
+    max-width:30%;
+    margin-top:80px;
+
+    background-color: var(--Magenta);
+
+    border:none;
+    border-top-right-radius: 10px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:3px;
+
+    font-family: var(--Regular);
+    font-size: var(--Regular);
+    color: var(--Branco);
+
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.estado{
+    margin-right: 50px;
+}
