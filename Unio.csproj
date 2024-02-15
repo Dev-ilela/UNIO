@@ -1,0 +1,1076 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{97144504-393D-4A10-AA48-A0D1DD25DE9A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unio</RootNamespace>
+    <AssemblyName>Unio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.5\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.1.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.4.4.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="ZstdSharp, Version=0.7.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.7.1\lib\net461\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="autonomosDisponiveis.aspx" />
+    <Content Include="AutonomosFavoritos.aspx" />
+    <Content Include="avaliacoesDoAutonomo.aspx" />
+    <Content Include="busca.aspx" />
+    <Content Include="buscaAutonomo.aspx" />
+    <Content Include="buscaServicos.aspx" />
+    <Content Include="cadastro.aspx" />
+    <Content Include="chatAutonomo.aspx" />
+    <Content Include="chatCliente.aspx" />
+    <Content Include="ComoFunciona.aspx" />
+    <Content Include="criacaoAnuncio.aspx" />
+    <Content Include="css\AutonomosDisponiveisStyle.css" />
+    <Content Include="css\AutonomosFavoritosStyle.css" />
+    <Content Include="css\avaliacoesDoAutonomo.css" />
+    <Content Include="css\buscaAutonomoStyle.css" />
+    <Content Include="css\buscarServicos&amp;PropostasStyle.css" />
+    <Content Include="css\buscarServicosStyle.css" />
+    <Content Include="css\buscaStyle.css" />
+    <Content Include="css\cadastroStyle.css" />
+    <Content Include="css\chatGlobal.css" />
+    <Content Include="css\ComoFuncionaStyle.css" />
+    <Content Include="css\criacao&amp;EdicaoAnuncio.css" />
+    <Content Include="css\criacaoAnuncio.css" />
+    <Content Include="css\edicaoPerfilAutonomo.css" />
+    <Content Include="css\edicaoPerfilCliente.css" />
+    <Content Include="css\emblemasStyle.css" />
+    <Content Include="css\erro.css" />
+    <Content Include="css\FiltroGlobal.css" />
+    <Content Include="css\formAutonomoStyle.css" />
+    <Content Include="css\formClienteStyle.css" />
+    <Content Include="css\global.css" />
+    <Content Include="css\headerAutonomoLogado.css" />
+    <Content Include="css\headerClienteLogado.css" />
+    <Content Include="css\headerSemLogar.css" />
+    <Content Include="css\indexStyle.css" />
+    <Content Include="css\meuPerfilAutonomo.css" />
+    <Content Include="css\meuPerfilCliente.css" />
+    <Content Include="css\painelAutonomoStyle.css" />
+    <Content Include="css\painelClienteStyle.css" />
+    <Content Include="css\perfilAutonomoStyle.css" />
+    <Content Include="css\teste.css" />
+    <Content Include="edicaoAnuncio.aspx" />
+    <Content Include="emblemas.aspx" />
+    <Content Include="erro.aspx" />
+    <Content Include="formAutonomo.aspx" />
+    <Content Include="formCliente.aspx" />
+    <Content Include="imagens\autonomos\autonomo_1.png" />
+    <Content Include="imagens\autonomos\autonomo_2.png" />
+    <Content Include="imagens\autonomos\autonomo_3.png" />
+    <Content Include="imagens\autonomos\autonomo_4.png" />
+    <Content Include="imagens\autonomos\autonomo_5.png" />
+    <Content Include="imagens\autonomos\portfolio_1.png" />
+    <Content Include="imagens\autonomos\portfolio_2.png" />
+    <Content Include="imagens\autonomos\portfolio_3.png" />
+    <Content Include="imagens\backgrounds\bg_index1.svg" />
+    <Content Include="imagens\backgrounds\bg_index2.svg" />
+    <Content Include="imagens\backgrounds\Rectangle 244.png" />
+    <Content Include="imagens\clientes\cliente_1.png" />
+    <Content Include="imagens\clientes\cliente_2.png" />
+    <Content Include="imagens\clientes\cliente_3.png" />
+    <Content Include="imagens\clientes\cliente_4.png" />
+    <Content Include="imagens\clientes\cliente_5.png" />
+    <Content Include="imagens\elementos\Elemento02.svg" />
+    <Content Include="imagens\elementos\Elemento09.svg" />
+    <Content Include="imagens\elementos\Elemento12.png" />
+    <Content Include="imagens\elementos\Elemento12.svg" />
+    <Content Include="imagens\elementos\Elemento13.png" />
+    <Content Include="imagens\elementos\Elemento14.png" />
+    <Content Include="imagens\elementos\Elemento15.png" />
+    <Content Include="imagens\elementos\elemento16.png" />
+    <Content Include="imagens\elementos\Elemento16.svg" />
+    <Content Include="imagens\elementos\Elemento17.svg" />
+    <Content Include="imagens\elementos\Elemento18.svg" />
+    <Content Include="imagens\elementos\Elemento19.svg" />
+    <Content Include="imagens\elementos\Elemento20.svg" />
+    <Content Include="imagens\elementos\Elemento21.svg" />
+    <Content Include="imagens\elementos\Elemento22.svg" />
+    <Content Include="imagens\elementos\Elemento23.svg" />
+    <Content Include="imagens\elementos\Elemento24.svg" />
+    <Content Include="imagens\elementos\Elemento25.svg" />
+    <Content Include="imagens\elementos\Elemento26.png" />
+    <Content Include="imagens\emblemas\bronze.png" />
+    <Content Include="imagens\emblemas\novato.png" />
+    <Content Include="imagens\emblemas\ouro.png" />
+    <Content Include="imagens\emblemas\prata.png" />
+    <Content Include="imagens\graficos_emblemas\grafico_prata.png" />
+    <Content Include="imagens\icones\404.png" />
+    <Content Include="imagens\icones\alert_icon.png" />
+    <Content Include="imagens\icones\aviso_icon.png" />
+    <Content Include="imagens\icones\aviso_Notificações.png" />
+    <Content Include="imagens\icones\back_etapa.svg" />
+    <Content Include="imagens\icones\back_forms_icon.png" />
+    <Content Include="imagens\icones\back_icon.png" />
+    <Content Include="imagens\icones\back_icon_busca.png" />
+    <Content Include="imagens\icones\certificado_icon.png" />
+    <Content Include="imagens\icones\comoFunciona_Icon.png" />
+    <Content Include="imagens\icones\coracao_preenchido.png" />
+    <Content Include="imagens\icones\forma_pag_3.png" />
+    <Content Include="imagens\icones\forma_pag_4.png" />
+    <Content Include="imagens\icones\forma_pag_1.png" />
+    <Content Include="imagens\icones\estrelas_vazadas.png" />
+    <Content Include="imagens\icones\estrela_pintada_sozinha.png" />
+    <Content Include="imagens\icones\estrela_vazada_sozinha.png" />
+    <Content Include="imagens\icones\facebook_icon.png" />
+    <Content Include="imagens\icones\front_icon_busca.png" />
+    <Content Include="imagens\icones\icone_lixo.png" />
+    <Content Include="imagens\icones\icon_erro.png" />
+    <Content Include="imagens\icones\icon_portfolio.png" />
+    <Content Include="imagens\icones\ig_icon.png" />
+    <Content Include="imagens\icones\linkedin_icon.png" />
+    <Content Include="imagens\icones\localizacao.png" />
+    <Content Include="imagens\icones\login_icon.png" />
+    <Content Include="imagens\icones\low_icon_busca.png" />
+    <Content Include="imagens\icones\low_icon_buscaAutnomo.png" />
+    <Content Include="imagens\icones\lupa_azul.png" />
+    <Content Include="imagens\icones\lupa_chat.png" />
+    <Content Include="imagens\icones\mdi_heart-outline.png" />
+    <Content Include="imagens\icones\Mensagens_icon.png" />
+    <Content Include="imagens\icones\Notificacoes_icon.png" />
+    <Content Include="imagens\icones\opcoes.png" />
+    <Content Include="imagens\icones\forma_pag_2.png" />
+    <Content Include="imagens\icones\play_icon.png" />
+    <Content Include="imagens\icones\procurarServico_icon.png" />
+    <Content Include="imagens\icones\propostasRecebidas_icon.png" />
+    <Content Include="imagens\icones\search_icon.png" />
+    <Content Include="imagens\icones\tres_pontos_icon.png" />
+    <Content Include="imagens\icones\triangulo.png" />
+    <Content Include="imagens\icones\whatsapp_icon.png" />
+    <Content Include="imagens\icon_notificacoes\autonomoSelecionado.png" />
+    <Content Include="imagens\icon_notificacoes\foiDenunciado.png" />
+    <Content Include="imagens\icon_notificacoes\mais.png" />
+    <Content Include="imagens\icon_notificacoes\novaMensagens.png" />
+    <Content Include="imagens\icon_notificacoes\servicoConcluido.png" />
+    <Content Include="imagens\imagens\autonomos\autonomo_1.png" />
+    <Content Include="imagens\imagens\autonomos\autonomo_2.png" />
+    <Content Include="imagens\imagens\autonomos\autonomo_3.png" />
+    <Content Include="imagens\imagens\autonomos\autonomo_4.png" />
+    <Content Include="imagens\imagens\autonomos\autonomo_5.png" />
+    <Content Include="imagens\imagens\autonomos\perfil_autonomo3.png" />
+    <Content Include="imagens\imagens\autonomos\portfolio_1.png" />
+    <Content Include="imagens\imagens\autonomos\portfolio_2.png" />
+    <Content Include="imagens\imagens\autonomos\portfolio_3.png" />
+    <Content Include="imagens\imagens\backgrounds\bg_index1.svg" />
+    <Content Include="imagens\imagens\backgrounds\bg_index2.svg" />
+    <Content Include="imagens\imagens\backgrounds\Rectangle 244.png" />
+    <Content Include="imagens\imagens\clientes\cliente1.png" />
+    <Content Include="imagens\imagens\clientes\cliente2.png" />
+    <Content Include="imagens\imagens\clientes\cliente3.png" />
+    <Content Include="imagens\imagens\clientes\cliente4.png" />
+    <Content Include="imagens\imagens\clientes\cliente5.png" />
+    <Content Include="imagens\imagens\clientes\cliente_1.png" />
+    <Content Include="imagens\imagens\clientes\cliente_2.png" />
+    <Content Include="imagens\imagens\clientes\cliente_3.png" />
+    <Content Include="imagens\imagens\clientes\cliente_4.png" />
+    <Content Include="imagens\imagens\clientes\cliente_5.png" />
+    <Content Include="imagens\imagens\clientes\estrelas2.png" />
+    <Content Include="imagens\imagens\clientes\estrelas4.png" />
+    <Content Include="imagens\imagens\clientes\estrelas5.png" />
+    <Content Include="imagens\imagens\como_funciona\doodle1.svg" />
+    <Content Include="imagens\imagens\como_funciona\doodle2.svg" />
+    <Content Include="imagens\imagens\como_funciona\doodle3.svg" />
+    <Content Include="imagens\imagens\como_funciona\linhaDoTempo.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento02.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento03.png" />
+    <Content Include="imagens\imagens\elementos\Elemento06.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento07.png" />
+    <Content Include="imagens\imagens\elementos\Elemento09.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento10.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento11.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento12.png" />
+    <Content Include="imagens\imagens\elementos\Elemento12.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento13.png" />
+    <Content Include="imagens\imagens\elementos\Elemento14.png" />
+    <Content Include="imagens\imagens\elementos\Elemento15.png" />
+    <Content Include="imagens\imagens\elementos\elemento16.png" />
+    <Content Include="imagens\imagens\elementos\Elemento16.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento17.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento18.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento19.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento20.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento21.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento22.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento23.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento24.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento25.svg" />
+    <Content Include="imagens\imagens\elementos\Elemento26.png" />
+    <Content Include="imagens\imagens\emblemas\bronze.png" />
+    <Content Include="imagens\imagens\emblemas\novato.png" />
+    <Content Include="imagens\imagens\emblemas\ouro.png" />
+    <Content Include="imagens\imagens\emblemas\prata.png" />
+    <Content Include="imagens\imagens\graficos_emblemas\grafico_prata.png" />
+    <Content Include="imagens\imagens\icones\404.png" />
+    <Content Include="imagens\imagens\icones\alert_icon.png" />
+    <Content Include="imagens\imagens\icones\aviso_icon.png" />
+    <Content Include="imagens\imagens\icones\aviso_Notificações.png" />
+    <Content Include="imagens\imagens\icones\back_etapa.svg" />
+    <Content Include="imagens\imagens\icones\back_forms_icon.png" />
+    <Content Include="imagens\imagens\icones\back_icon.png" />
+    <Content Include="imagens\imagens\icones\back_icon_busca.png" />
+    <Content Include="imagens\imagens\icones\certificado_icon.png" />
+    <Content Include="imagens\imagens\icones\comoFunciona_Icon.png" />
+    <Content Include="imagens\imagens\icones\coracao_preenchido.png" />
+    <Content Include="imagens\imagens\icones\credito.png" />
+    <Content Include="imagens\imagens\icones\debito.png" />
+    <Content Include="imagens\imagens\icones\dinheiro.png" />
+    <Content Include="imagens\imagens\icones\estrelas_vazadas.png" />
+    <Content Include="imagens\imagens\icones\estrela_pintada_sozinha.png" />
+    <Content Include="imagens\imagens\icones\estrela_vazada_sozinha.png" />
+    <Content Include="imagens\imagens\icones\facebook_icon.png" />
+    <Content Include="imagens\imagens\icones\front_icon_busca.png" />
+    <Content Include="imagens\imagens\icones\icone_lixo.png" />
+    <Content Include="imagens\imagens\icones\icon_erro.png" />
+    <Content Include="imagens\imagens\icones\icon_portfolio.png" />
+    <Content Include="imagens\imagens\icones\ig_icon.png" />
+    <Content Include="imagens\imagens\icones\linkedin_icon.png" />
+    <Content Include="imagens\imagens\icones\localizacao.png" />
+    <Content Include="imagens\imagens\icones\login_icon.png" />
+    <Content Include="imagens\imagens\icones\low_icon_busca.png" />
+    <Content Include="imagens\imagens\icones\low_icon_buscaAutnomo.png" />
+    <Content Include="imagens\imagens\icones\lupa_azul.png" />
+    <Content Include="imagens\imagens\icones\lupa_chat.png" />
+    <Content Include="imagens\imagens\icones\mdi_heart-outline.png" />
+    <Content Include="imagens\imagens\icones\Mensagens_icon.png" />
+    <Content Include="imagens\imagens\icones\Notificacoes_icon.png" />
+    <Content Include="imagens\imagens\icones\opcoes.png" />
+    <Content Include="imagens\imagens\icones\pix.png" />
+    <Content Include="imagens\imagens\icones\play_icon.png" />
+    <Content Include="imagens\imagens\icones\procurarServico_icon.png" />
+    <Content Include="imagens\imagens\icones\propostasRecebidas_icon.png" />
+    <Content Include="imagens\imagens\icones\search_icon.png" />
+    <Content Include="imagens\imagens\icones\tres_pontos_icon.png" />
+    <Content Include="imagens\imagens\icones\triangulo.png" />
+    <Content Include="imagens\imagens\icones\whatsapp_icon.png" />
+    <Content Include="imagens\imagens\icon_notificacoes\autonomoSelecionado.png" />
+    <Content Include="imagens\imagens\icon_notificacoes\foiDenunciado.png" />
+    <Content Include="imagens\imagens\icon_notificacoes\mais.png" />
+    <Content Include="imagens\imagens\icon_notificacoes\novaMensagens.png" />
+    <Content Include="imagens\imagens\icon_notificacoes\servicoConcluido.png" />
+    <Content Include="imagens\imagens\logos\logo_branca.png" />
+    <Content Include="imagens\imagens\logos\logo_branca_texto.svg" />
+    <Content Include="imagens\imagens\logos\logo_padrao.png" />
+    <Content Include="imagens\imagens\logos\logo_vermelho.png" />
+    <Content Include="imagens\imagens\outras_imagens\autonomo.svg" />
+    <Content Include="imagens\imagens\outras_imagens\bg_s2_art1.svg" />
+    <Content Include="imagens\imagens\outras_imagens\bg_s2_art2.svg" />
+    <Content Include="imagens\imagens\outras_imagens\bg_s3_div.svg" />
+    <Content Include="imagens\imagens\outras_imagens\cliente.svg" />
+    <Content Include="imagens\imagens\outras_imagens\SemPortfolio.svg" />
+    <Content Include="imagens\logos\logo_branca.png" />
+    <Content Include="imagens\logos\logo_padrao.png" />
+    <Content Include="imagens\logos\logo_vermelho.png" />
+    <Content Include="imagens\outras_imagens\autonomo.svg" />
+    <Content Include="imagens\outras_imagens\bg_s2_art1.svg" />
+    <Content Include="imagens\outras_imagens\bg_s2_art2.svg" />
+    <Content Include="imagens\outras_imagens\bg_s3_div.svg" />
+    <Content Include="imagens\outras_imagens\cliente.svg" />
+    <Content Include="imagens\outras_imagens\SemPortfolio.svg" />
+    <Content Include="index.aspx" />
+    <Content Include="lib\AdicionarCandidatura.aspx" />
+    <Content Include="lib\AdicionarFavorito.aspx" />
+    <Content Include="lib\AdicionarPortfolio.aspx" />
+    <Content Include="lib\AlterarFotoPerfil.aspx" />
+    <Content Include="lib\aplicarFiltroPainelCliente.aspx" />
+    <Content Include="lib\AvaliarServico.aspx" />
+    <Content Include="lib\CancelarAnuncio.aspx" />
+    <Content Include="lib\carregarAreasAtuacao.aspx" />
+    <Content Include="lib\carregarAutonomosContratados.aspx" />
+    <Content Include="lib\CarregarConversas.aspx" />
+    <Content Include="lib\CarregarPortfolios.aspx" />
+    <Content Include="lib\carregarPrazos.aspx" />
+    <Content Include="lib\carregarStatus.aspx" />
+    <Content Include="lib\ConcluirAnuncio.aspx" />
+    <Content Include="lib\ContratarAutonomo.aspx" />
+    <Content Include="lib\CriarAnuncio.aspx" />
+    <Content Include="lib\CriarAutonomo.aspx" />
+    <Content Include="lib\CriarCliente.aspx" />
+    <Content Include="lib\DeletarFavorito.aspx" />
+    <Content Include="lib\DeletarPortfolio.aspx" />
+    <Content Include="lib\Denunciar.aspx" />
+    <Content Include="lib\EditarAnuncio.aspx" />
+    <Content Include="lib\EditarPerfil.aspx" />
+    <Content Include="lib\EditarProfissao.aspx" />
+    <Content Include="lib\EntrarSessao.aspx" />
+    <Content Include="lib\EnviarMensagem.aspx" />
+    <Content Include="lib\FiltrarAvaliacoes.aspx" />
+    <Content Include="lib\filtrarPorAreaAtuacao.aspx" />
+    <Content Include="lib\GerenciaAreaAtuacao.aspx" />
+    <Content Include="lib\GerenciaChats.aspx" />
+    <Content Include="lib\GerenciaCidade.aspx" />
+    <Content Include="lib\GerenciaDenuncias.aspx" />
+    <Content Include="lib\GerenciaEstado.aspx" />
+    <Content Include="lib\GerenciaFavs.aspx" />
+    <Content Include="lib\GerenciaFormasPagamento.aspx" />
+    <Content Include="lib\GerenciaFormasTrabalho.aspx" />
+    <Content Include="lib\GerenciaPrazo.aspx" />
+    <Content Include="lib\GerenciaProfissoes.aspx" />
+    <Content Include="lib\GerenciarFavoritos.aspx" />
+    <Content Include="lib\PreencheCidade.aspx" />
+    <Content Include="lib\RemoverCandidatura.aspx" />
+    <Content Include="lib\SairSessao.aspx" />
+    <Content Include="lib\VerificaPortfolio.aspx" />
+    <Content Include="meuPerfilAutonomo.aspx" />
+    <Content Include="meuPerfilCliente.aspx" />
+    <Content Include="painelAutonomo.aspx" />
+    <Content Include="painelCliente.aspx" />
+    <Content Include="perfilAutonomo.aspx" />
+    <Content Include="propostasRecebidas.aspx" />
+    <Content Include="script\alert.js" />
+    <Content Include="script\assincrono.js" />
+    <Content Include="script\AutonomosFavoritos.js" />
+    <Content Include="script\AvaliacoesAutonomo.js" />
+    <Content Include="script\barraProgresso.js" />
+    <Content Include="script\busca.js" />
+    <Content Include="script\buscaAutonomo.js" />
+    <Content Include="script\chatGlobal.js" />
+    <Content Include="script\code.jquery.com_jquery-3.7.0.min.js" />
+    <Content Include="script\contratarAutonomo.js" />
+    <Content Include="script\criacaoAnuncio.js" />
+    <Content Include="script\detalhesAnuncio.js" />
+    <Content Include="script\detalhesAnuncioCliente.js" />
+    <Content Include="script\EditarPerfil.js" />
+    <Content Include="script\emblemas.js" />
+    <Content Include="script\favoritos.js" />
+    <Content Include="script\login.js" />
+    <Content Include="script\menuHeaderAutonomo.js" />
+    <Content Include="script\menuHeaderCliente.js" />
+    <Content Include="script\meuPerfilAutonomo.js" />
+    <Content Include="script\meuPerfilCliente.js" />
+    <Content Include="script\Notificacoes.js" />
+    <Content Include="script\painelAutonomo.js" />
+    <Content Include="script\perfilAutonomo.js" />
+    <Content Include="script\portfolio.js" />
+    <Content Include="ToDo\ToDo.txt" />
+    <Content Include="video\vComoFunciona.mp4" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="autonomosDisponiveis.aspx.cs">
+      <DependentUpon>autonomosDisponiveis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="autonomosDisponiveis.aspx.designer.cs">
+      <DependentUpon>autonomosDisponiveis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AutonomosFavoritos.aspx.cs">
+      <DependentUpon>AutonomosFavoritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutonomosFavoritos.aspx.designer.cs">
+      <DependentUpon>AutonomosFavoritos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="avaliacoesDoAutonomo.aspx.cs">
+      <DependentUpon>avaliacoesDoAutonomo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="avaliacoesDoAutonomo.aspx.designer.cs">
+      <DependentUpon>avaliacoesDoAutonomo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="busca.aspx.cs">
+      <DependentUpon>busca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="busca.aspx.designer.cs">
+      <DependentUpon>busca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buscaAutonomo.aspx.cs">
+      <DependentUpon>buscaAutonomo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buscaAutonomo.aspx.designer.cs">
+      <DependentUpon>buscaAutonomo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buscaServicos.aspx.cs">
+      <DependentUpon>buscaServicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buscaServicos.aspx.designer.cs">
+      <DependentUpon>buscaServicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cadastro.aspx.cs">
+      <DependentUpon>cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cadastro.aspx.designer.cs">
+      <DependentUpon>cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chatAutonomo.aspx.cs">
+      <DependentUpon>chatAutonomo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chatAutonomo.aspx.designer.cs">
+      <DependentUpon>chatAutonomo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chatCliente.aspx.cs">
+      <DependentUpon>chatCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chatCliente.aspx.designer.cs">
+      <DependentUpon>chatCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComoFunciona.aspx.cs">
+      <DependentUpon>ComoFunciona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComoFunciona.aspx.designer.cs">
+      <DependentUpon>ComoFunciona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="criacaoAnuncio.aspx.cs">
+      <DependentUpon>criacaoAnuncio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="criacaoAnuncio.aspx.designer.cs">
+      <DependentUpon>criacaoAnuncio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edicaoAnuncio.aspx.cs">
+      <DependentUpon>edicaoAnuncio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edicaoAnuncio.aspx.designer.cs">
+      <DependentUpon>edicaoAnuncio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="emblemas.aspx.cs">
+      <DependentUpon>emblemas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="emblemas.aspx.designer.cs">
+      <DependentUpon>emblemas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="erro.aspx.cs">
+      <DependentUpon>erro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="erro.aspx.designer.cs">
+      <DependentUpon>erro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="formAutonomo.aspx.cs">
+      <DependentUpon>formAutonomo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="formAutonomo.aspx.designer.cs">
+      <DependentUpon>formAutonomo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="formCliente.aspx.cs">
+      <DependentUpon>formCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="formCliente.aspx.designer.cs">
+      <DependentUpon>formCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\AdicionarCandidatura.aspx.cs">
+      <DependentUpon>AdicionarCandidatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\AdicionarCandidatura.aspx.designer.cs">
+      <DependentUpon>AdicionarCandidatura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\AdicionarFavorito.aspx.cs">
+      <DependentUpon>AdicionarFavorito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\AdicionarFavorito.aspx.designer.cs">
+      <DependentUpon>AdicionarFavorito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\AdicionarPortfolio.aspx.cs">
+      <DependentUpon>AdicionarPortfolio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\AdicionarPortfolio.aspx.designer.cs">
+      <DependentUpon>AdicionarPortfolio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\AlterarFotoPerfil.aspx.cs">
+      <DependentUpon>AlterarFotoPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\AlterarFotoPerfil.aspx.designer.cs">
+      <DependentUpon>AlterarFotoPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\aplicarFiltroPainelCliente.aspx.cs">
+      <DependentUpon>aplicarFiltroPainelCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\aplicarFiltroPainelCliente.aspx.designer.cs">
+      <DependentUpon>aplicarFiltroPainelCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\AvaliarServico.aspx.cs">
+      <DependentUpon>AvaliarServico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\AvaliarServico.aspx.designer.cs">
+      <DependentUpon>AvaliarServico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\CancelarAnuncio.aspx.cs">
+      <DependentUpon>CancelarAnuncio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\CancelarAnuncio.aspx.designer.cs">
+      <DependentUpon>CancelarAnuncio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\carregarAreasAtuacao.aspx.cs">
+      <DependentUpon>carregarAreasAtuacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\carregarAreasAtuacao.aspx.designer.cs">
+      <DependentUpon>carregarAreasAtuacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\carregarAutonomosContratados.aspx.cs">
+      <DependentUpon>carregarAutonomosContratados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\carregarAutonomosContratados.aspx.designer.cs">
+      <DependentUpon>carregarAutonomosContratados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\CarregarConversas.aspx.cs">
+      <DependentUpon>CarregarConversas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\CarregarConversas.aspx.designer.cs">
+      <DependentUpon>CarregarConversas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\CarregarPortfolios.aspx.cs">
+      <DependentUpon>CarregarPortfolios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\CarregarPortfolios.aspx.designer.cs">
+      <DependentUpon>CarregarPortfolios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\carregarPrazos.aspx.cs">
+      <DependentUpon>carregarPrazos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\carregarPrazos.aspx.designer.cs">
+      <DependentUpon>carregarPrazos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\carregarStatus.aspx.cs">
+      <DependentUpon>carregarStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\carregarStatus.aspx.designer.cs">
+      <DependentUpon>carregarStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\ConcluirAnuncio.aspx.cs">
+      <DependentUpon>ConcluirAnuncio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\ConcluirAnuncio.aspx.designer.cs">
+      <DependentUpon>ConcluirAnuncio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\ContratarAutonomo.aspx.cs">
+      <DependentUpon>ContratarAutonomo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\ContratarAutonomo.aspx.designer.cs">
+      <DependentUpon>ContratarAutonomo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\CriarAnuncio.aspx.cs">
+      <DependentUpon>CriarAnuncio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\CriarAnuncio.aspx.designer.cs">
+      <DependentUpon>CriarAnuncio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\CriarAutonomo.aspx.cs">
+      <DependentUpon>CriarAutonomo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\CriarAutonomo.aspx.designer.cs">
+      <DependentUpon>CriarAutonomo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\CriarCliente.aspx.cs">
+      <DependentUpon>CriarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\CriarCliente.aspx.designer.cs">
+      <DependentUpon>CriarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\DeletarFavorito.aspx.cs">
+      <DependentUpon>DeletarFavorito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\DeletarFavorito.aspx.designer.cs">
+      <DependentUpon>DeletarFavorito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\DeletarPortfolio.aspx.cs">
+      <DependentUpon>DeletarPortfolio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\DeletarPortfolio.aspx.designer.cs">
+      <DependentUpon>DeletarPortfolio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\Denunciar.aspx.cs">
+      <DependentUpon>Denunciar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\Denunciar.aspx.designer.cs">
+      <DependentUpon>Denunciar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\EditarAnuncio.aspx.cs">
+      <DependentUpon>EditarAnuncio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\EditarAnuncio.aspx.designer.cs">
+      <DependentUpon>EditarAnuncio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\EditarPerfil.aspx.cs">
+      <DependentUpon>EditarPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\EditarPerfil.aspx.designer.cs">
+      <DependentUpon>EditarPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\EditarProfissao.aspx.cs">
+      <DependentUpon>EditarProfissao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\EditarProfissao.aspx.designer.cs">
+      <DependentUpon>EditarProfissao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\EntrarSessao.aspx.cs">
+      <DependentUpon>EntrarSessao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\EntrarSessao.aspx.designer.cs">
+      <DependentUpon>EntrarSessao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\EnviarMensagem.aspx.cs">
+      <DependentUpon>EnviarMensagem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\EnviarMensagem.aspx.designer.cs">
+      <DependentUpon>EnviarMensagem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\FiltrarAvaliacoes.aspx.cs">
+      <DependentUpon>FiltrarAvaliacoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\FiltrarAvaliacoes.aspx.designer.cs">
+      <DependentUpon>FiltrarAvaliacoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\filtrarPorAreaAtuacao.aspx.cs">
+      <DependentUpon>filtrarPorAreaAtuacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\filtrarPorAreaAtuacao.aspx.designer.cs">
+      <DependentUpon>filtrarPorAreaAtuacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\GerenciaAreaAtuacao.aspx.cs">
+      <DependentUpon>GerenciaAreaAtuacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\GerenciaAreaAtuacao.aspx.designer.cs">
+      <DependentUpon>GerenciaAreaAtuacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\GerenciaChats.aspx.cs">
+      <DependentUpon>GerenciaChats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\GerenciaChats.aspx.designer.cs">
+      <DependentUpon>GerenciaChats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\GerenciaCidade.aspx.cs">
+      <DependentUpon>GerenciaCidade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\GerenciaCidade.aspx.designer.cs">
+      <DependentUpon>GerenciaCidade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\GerenciaDenuncias.aspx.cs">
+      <DependentUpon>GerenciaDenuncias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\GerenciaDenuncias.aspx.designer.cs">
+      <DependentUpon>GerenciaDenuncias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\GerenciaEstado.aspx.cs">
+      <DependentUpon>GerenciaEstado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\GerenciaEstado.aspx.designer.cs">
+      <DependentUpon>GerenciaEstado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\GerenciaFavs.aspx.cs">
+      <DependentUpon>GerenciaFavs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\GerenciaFavs.aspx.designer.cs">
+      <DependentUpon>GerenciaFavs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\GerenciaFormasPagamento.aspx.cs">
+      <DependentUpon>GerenciaFormasPagamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\GerenciaFormasPagamento.aspx.designer.cs">
+      <DependentUpon>GerenciaFormasPagamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\GerenciaFormasTrabalho.aspx.cs">
+      <DependentUpon>GerenciaFormasTrabalho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\GerenciaFormasTrabalho.aspx.designer.cs">
+      <DependentUpon>GerenciaFormasTrabalho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\GerenciaPrazo.aspx.cs">
+      <DependentUpon>GerenciaPrazo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\GerenciaPrazo.aspx.designer.cs">
+      <DependentUpon>GerenciaPrazo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\GerenciaProfissoes.aspx.cs">
+      <DependentUpon>GerenciaProfissoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\GerenciaProfissoes.aspx.designer.cs">
+      <DependentUpon>GerenciaProfissoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\GerenciarFavoritos.aspx.cs">
+      <DependentUpon>GerenciarFavoritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\GerenciarFavoritos.aspx.designer.cs">
+      <DependentUpon>GerenciarFavoritos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\PreencheCidade.aspx.cs">
+      <DependentUpon>PreencheCidade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\PreencheCidade.aspx.designer.cs">
+      <DependentUpon>PreencheCidade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\RemoverCandidatura.aspx.cs">
+      <DependentUpon>RemoverCandidatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\RemoverCandidatura.aspx.designer.cs">
+      <DependentUpon>RemoverCandidatura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\SairSessao.aspx.cs">
+      <DependentUpon>SairSessao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\SairSessao.aspx.designer.cs">
+      <DependentUpon>SairSessao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\VerificaPortfolio.aspx.cs">
+      <DependentUpon>VerificaPortfolio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\VerificaPortfolio.aspx.designer.cs">
+      <DependentUpon>VerificaPortfolio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="meuPerfilAutonomo.aspx.cs">
+      <DependentUpon>meuPerfilAutonomo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="meuPerfilAutonomo.aspx.designer.cs">
+      <DependentUpon>meuPerfilAutonomo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="meuPerfilCliente.aspx.cs">
+      <DependentUpon>meuPerfilCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="meuPerfilCliente.aspx.designer.cs">
+      <DependentUpon>meuPerfilCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modelos\Anuncio.cs" />
+    <Compile Include="modelos\Anuncios.cs" />
+    <Compile Include="modelos\AreaAtuacao.cs" />
+    <Compile Include="modelos\AreasAtuacao.cs" />
+    <Compile Include="modelos\Autonomo.cs" />
+    <Compile Include="modelos\Autonomos.cs" />
+    <Compile Include="modelos\Avaliacao.cs" />
+    <Compile Include="modelos\Avaliacoes.cs" />
+    <Compile Include="modelos\Banco.cs" />
+    <Compile Include="modelos\Cidade.cs" />
+    <Compile Include="modelos\Cidades.cs" />
+    <Compile Include="modelos\Cliente.cs" />
+    <Compile Include="modelos\Clientes.cs" />
+    <Compile Include="modelos\Conexao.cs" />
+    <Compile Include="modelos\Denuncia.cs" />
+    <Compile Include="modelos\Denuncias.cs" />
+    <Compile Include="modelos\Emblema.cs" />
+    <Compile Include="modelos\Emblemas.cs" />
+    <Compile Include="modelos\Estado.cs" />
+    <Compile Include="modelos\EstadoAnuncio.cs" />
+    <Compile Include="modelos\Estados.cs" />
+    <Compile Include="modelos\EstadosAnuncio.cs" />
+    <Compile Include="modelos\Favoritos.cs" />
+    <Compile Include="modelos\FormaPagamento.cs" />
+    <Compile Include="modelos\FormasPagamento.cs" />
+    <Compile Include="modelos\FormasTrabalho.cs" />
+    <Compile Include="modelos\FormaTrabalho.cs" />
+    <Compile Include="modelos\Mensagem.cs" />
+    <Compile Include="modelos\Mensagens.cs" />
+    <Compile Include="modelos\MotivoDenuncia.cs" />
+    <Compile Include="modelos\MotivosDenuncia.cs" />
+    <Compile Include="modelos\Parametro.cs" />
+    <Compile Include="modelos\Portfolio.cs" />
+    <Compile Include="modelos\Portfolios.cs" />
+    <Compile Include="modelos\Prazo.cs" />
+    <Compile Include="modelos\Prazos.cs" />
+    <Compile Include="modelos\Profissao.cs" />
+    <Compile Include="modelos\Profissoes.cs" />
+    <Compile Include="modelos\Proposta.cs" />
+    <Compile Include="modelos\Propostas.cs" />
+    <Compile Include="modelos\Usuario.cs" />
+    <Compile Include="modelos\Usuarios.cs" />
+    <Compile Include="painelAutonomo.aspx.cs">
+      <DependentUpon>painelAutonomo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="painelAutonomo.aspx.designer.cs">
+      <DependentUpon>painelAutonomo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="painelCliente.aspx.cs">
+      <DependentUpon>painelCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="painelCliente.aspx.designer.cs">
+      <DependentUpon>painelCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="perfilAutonomo.aspx.cs">
+      <DependentUpon>perfilAutonomo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfilAutonomo.aspx.designer.cs">
+      <DependentUpon>perfilAutonomo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="propostasRecebidas.aspx.cs">
+      <DependentUpon>propostasRecebidas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="propostasRecebidas.aspx.designer.cs">
+      <DependentUpon>propostasRecebidas.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\Raleway\Raleway-Bold.ttf" />
+    <Content Include="fonts\Raleway\Raleway-BoldItalic.ttf" />
+    <Content Include="fonts\Raleway\Raleway-Medium.ttf" />
+    <Content Include="fonts\Raleway\Raleway-MediumItalic.ttf" />
+    <Content Include="fonts\Raleway\Raleway-Regular.ttf" />
+    <Content Include="fonts\Raleway\Raleway-SemiBold.ttf" />
+    <Content Include="fonts\Raleway\Raleway-SemiBoldItalic.ttf" />
+    <Content Include="fonts\Raleway\Raleway-Thin.ttf" />
+    <Content Include="fonts\Raleway\Raleway-ThinItalic.ttf" />
+    <Content Include="imagens\backgrounds\bg_cross_v2.webp" />
+    <Content Include="imagens\backgrounds\bg_index2.webp" />
+    <Content Include="imagens\elementos\compressed.zip" />
+    <Content Include="imagens\elementos\Elemento01.webp" />
+    <Content Include="imagens\elementos\Elemento02.webp" />
+    <Content Include="imagens\elementos\Elemento03.webp" />
+    <Content Include="imagens\elementos\Elemento04.webp" />
+    <Content Include="imagens\elementos\Elemento05.webp" />
+    <Content Include="imagens\elementos\Elemento06.webp" />
+    <Content Include="imagens\elementos\Elemento07.webp" />
+    <Content Include="imagens\elementos\Elemento08.webp" />
+    <Content Include="imagens\elementos\Elemento09.webp" />
+    <Content Include="imagens\elementos\Elemento10.webp" />
+    <Content Include="imagens\elementos\Elemento10_2.webp" />
+    <Content Include="imagens\elementos\Elemento11.webp" />
+    <Content Include="imagens\outras_imagens\bg_s2_art1.webp" />
+    <Content Include="imagens\outras_imagens\bg_s2_art2.webp" />
+    <Content Include="imagens\outras_imagens\bg_s3_div.webp" />
+    <Content Include="imagens\outras_imagens\pexels-anna-nekrashevich-7550896 1.webp" />
+    <Content Include="imagens\outras_imagens\pexels-anna-nekrashevich-7552067 1.webp" />
+    <Content Include="imagens\outras_imagens\pexels-anna-nekrashevich-7552361 1.webp" />
+    <Content Include="imagens\outras_imagens\pexels-anna-nekrashevich-7552365 1.webp" />
+    <Content Include="imagens\outras_imagens\pexels-anna-nekrashevich-7552439 1.webp" />
+    <Content Include="imagens\outras_imagens\pexels-anna-nekrashevich-7552447 1.webp" />
+    <Content Include="imagens\outras_imagens\pexels-anna-nekrashevich-7552577 1.webp" />
+    <Content Include="imagens\outras_imagens\pexels-anna-nekrashevich-8989344 1.webp" />
+    <Content Include="imagens\outras_imagens\pexels-anna-nekrashevich-8989423 1.webp" />
+    <Content Include="imagens\outras_imagens\pexels-anna-nekrashevich-8993922 1.webp" />
+    <Content Include="imagens\outras_imagens\pexels-ron-lach-8368377 1.webp" />
+    <Content Include="imagens\outras_imagens\pexels-yaroslav-shuraev-6281012 1.webp" />
+    <Content Include="imagens\outras_imagens\pexels-yaroslav-shuraev-6281167 1.webp" />
+    <Content Include="imagens\imagens\backgrounds\bg_cross_v2.webp" />
+    <Content Include="imagens\imagens\backgrounds\bg_index1.webp" />
+    <Content Include="imagens\imagens\backgrounds\bg_index2.webp" />
+    <Content Include="imagens\imagens\elementos\compressed.zip" />
+    <Content Include="imagens\imagens\elementos\Elemento01.webp" />
+    <Content Include="imagens\imagens\elementos\Elemento04.webp" />
+    <Content Include="imagens\imagens\elementos\Elemento05.webp" />
+    <Content Include="imagens\imagens\elementos\Elemento07.webp" />
+    <Content Include="imagens\imagens\elementos\Elemento08.webp" />
+    <Content Include="imagens\imagens\outras_imagens\bg_s2_art1.webp" />
+    <Content Include="imagens\imagens\outras_imagens\bg_s2_art2.webp" />
+    <Content Include="imagens\imagens\outras_imagens\bg_s3_div.webp" />
+    <Content Include="imagens\imagens\outras_imagens\pexels-anna-nekrashevich-7550896 1.webp" />
+    <Content Include="imagens\imagens\outras_imagens\pexels-anna-nekrashevich-7552067 1.webp" />
+    <Content Include="imagens\imagens\outras_imagens\pexels-anna-nekrashevich-7552361 1.webp" />
+    <Content Include="imagens\imagens\outras_imagens\pexels-anna-nekrashevich-7552365 1.webp" />
+    <Content Include="imagens\imagens\outras_imagens\pexels-anna-nekrashevich-7552439 1.webp" />
+    <Content Include="imagens\imagens\outras_imagens\pexels-anna-nekrashevich-7552447 1.webp" />
+    <Content Include="imagens\imagens\outras_imagens\pexels-anna-nekrashevich-7552577 1.webp" />
+    <Content Include="imagens\imagens\outras_imagens\pexels-anna-nekrashevich-8989344 1.webp" />
+    <Content Include="imagens\imagens\outras_imagens\pexels-anna-nekrashevich-8989423 1.webp" />
+    <Content Include="imagens\imagens\outras_imagens\pexels-anna-nekrashevich-8993922 1.webp" />
+    <Content Include="imagens\imagens\outras_imagens\pexels-ron-lach-8368377 1.webp" />
+    <Content Include="imagens\imagens\outras_imagens\pexels-yaroslav-shuraev-6281012 1.webp" />
+    <Content Include="imagens\imagens\outras_imagens\pexels-yaroslav-shuraev-6281167 1.webp" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58004</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58004/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
